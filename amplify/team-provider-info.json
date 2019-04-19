@@ -9,6 +9,11 @@
             "UnauthRoleName": "sharr-20190420070120-unauthRole",
             "StackName": "sharr-20190420070120",
             "StackId": "arn:aws:cloudformation:ap-southeast-2:279180263681:stack/sharr-20190420070120/48783b70-62e6-11e9-93cd-0a843035a916"
+        },
+        "categories": {
+            "auth": {
+                "cognito4295e4da": {}
+            }
         }
     }
 }
