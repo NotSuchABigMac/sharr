@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import UVIndex from "./UVIndex.vue";
+import UVIndex from "./InteractiveCandlestick.vue";
 import Visibility from "./Visibility.vue";
 
 export default {

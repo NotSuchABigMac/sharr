@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import TempVarChart from './TempVarChart.vue';
+    import TempVarChart from './CandleChart.vue';
     import Highlights from './Highlights.vue';
 
     export default {
