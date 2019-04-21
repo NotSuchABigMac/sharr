@@ -4,7 +4,7 @@
       <fusioncharts
         type="candlestick"
         width="100%"
-        height="100%"
+        height="400"
         dataformat="json" 
         dataEmptyMessage="i-https://i.postimg.cc/R0QCk9vV/Rolling-0-9s-99px.gif"
         dataEmptyMessageImageScale=39
@@ -986,11 +986,11 @@ export default {
   },
   mounted: function() {
     this.setChartData();
-  }, 
+  },
   watch: {
     tempVar: {
       handler: function() {
-        this.setChartData();                                    
+        this.setChartData();
       },
       deep: true
     },

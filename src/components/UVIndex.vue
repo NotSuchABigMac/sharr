@@ -19,97 +19,213 @@ export default {
   components: {},
   data() {
     return {
-      type: "angulargauge",
+      type: "inversemsline",
       width: "100%",
-      height: "100%",
+      height: "400",
       containerbackgroundopacity: 0,
       dataformat: "json",
       datasource: {
         chart: {
-          caption: "UV Index",
-          captionFontBold: "0",
-          captionFontColor: "#000000",
-          captionPadding: "30",
-          lowerLimit: "0",
-          upperLimit: "15",
-          lowerLimitDisplay: "1",
-          upperLimitDisplay: "1",
-          showValue: "0",
+          caption: "FIFA Ranking",
+          subcaption: "Argentina vs Germany<br>2000-2018",
           theme: "fusion",
-          baseFont: "Roboto",
-          bgAlpha: "0",
-          canvasbgAlpha: "0",
-          gaugeInnerRadius: "75",
-          gaugeOuterRadius: "110",
-          pivotRadius: "0",
-          pivotFillAlpha: "0",
-          valueFontSize: "20",
-          valueFontColor: "#000000",
-          valueFontBold: "1",
-          tickValueDistance: "3",
-          autoAlignTickValues: "1",
-          majorTMAlpha: "20",
-          chartTopMargin: "30",
-          chartBottomMargin: "40"
+          yaxisname: "Rank",
+          xaxisname: "Years",
+          plottooltext: "$seriesName: <b>$dataValue</b>",
+          rotatelabels: "1",
+          slantlabels: "0"
         },
-        colorrange: {
-          color: [
-            {
-              minvalue: "0",
-              maxvalue: this.highlights.uvIndex.toString(),
-              code: "#7DA9E0"
-            },
-            {
-              minvalue: this.highlights.uvIndex.toString(),
-              maxvalue: "15",
-              code: "#D8EDFF"
-            }
-          ]
-        },
-        annotations: {
-          groups: [
-            {
-              items: [
-                {
-                  id: "val-label",
-                  type: "text",
-                  text: this.highlights.uvIndex.toString(),
-                  fontSize: "20",
-                  font: "Source Sans Pro",
-                  fontBold: "1",
-                  fillcolor: "#212529",
-                  x: "$gaugeCenterX",
-                  y: "$gaugeCenterY"
-                }
-              ]
-            }
-          ]
-        },
-        dials: {
-          dial: [
-            {
-              value: this.highlights.uvIndex.toString(),
-              baseWidth: "0",
-              radius: "0",
-              borderThickness: "0",
-              baseRadius: "0"
-            }
-          ]
-        }
-      }
+        categories: [
+          {
+            category: [
+              {
+                label: "2000"
+              },
+              {
+                label: "2001"
+              },
+              {
+                label: "2002"
+              },
+              {
+                label: "2003"
+              },
+              {
+                label: "2004"
+              },
+              {
+                label: "2005"
+              },
+              {
+                label: "2006"
+              },
+              {
+                label: "2007"
+              },
+              {
+                label: "2008"
+              },
+              {
+                label: "2009"
+              },
+              {
+                label: "2010"
+              },
+              {
+                label: "2011"
+              },
+              {
+                label: "2012"
+              },
+              {
+                label: "2013"
+              },
+              {
+                label: "2014"
+              },
+              {
+                label: "2015"
+              },
+              {
+                label: "2016"
+              },
+              {
+                label: "2017"
+              },
+              {
+                label: "2018"
+              }
+            ]
+          }
+        ],
+        dataset: [
+          {
+            seriesname: "Germany",
+            data: [
+              {
+                value: "11"
+              },
+              {
+                value: "12"
+              },
+              {
+                value: "4"
+              },
+              {
+                value: "12"
+              },
+              {
+                value: "19"
+              },
+              {
+                value: "16"
+              },
+              {
+                value: "6"
+              },
+              {
+                value: "5"
+              },
+              {
+                value: "2"
+              },
+              {
+                value: "6"
+              },
+              {
+                value: "3"
+              },
+              {
+                value: "3"
+              },
+              {
+                value: "2"
+              },
+              {
+                value: "2"
+              },
+              {
+                value: "1"
+              },
+              {
+                value: "4"
+              },
+              {
+                value: "3"
+              },
+              {
+                value: "1"
+              },
+              {
+                value: "1"
+              }
+            ]
+          },
+          {
+            seriesname: "Argentina",
+            data: [
+              {
+                value: "3"
+              },
+              {
+                value: "2"
+              },
+              {
+                value: "5"
+              },
+              {
+                value: "5"
+              },
+              {
+                value: "3"
+              },
+              {
+                value: "4"
+              },
+              {
+                value: "3"
+              },
+              {
+                value: "1"
+              },
+              {
+                value: "6"
+              },
+              {
+                value: "8"
+              },
+              {
+                value: "5"
+              },
+              {
+                value: "10"
+              },
+              {
+                value: "3"
+              },
+              {
+                value: "3"
+              },
+              {
+                value: "2"
+              },
+              {
+                value: "2"
+              },
+              {
+                value: "1"
+              },
+              {
+                value: "4"
+              },
+              {
+                value: "5"
+              }
+            ]
+          }
+        ]
+      },
     };
   },
-  methods: {},
-  computed: {},
-  watch: {
-    highlights: {
-      handler: function() {
-        this.datasource.colorrange.color[0].maxvalue = this.highlights.uvIndex.toString();
-        this.datasource.colorrange.color[1].minvalue = this.highlights.uvIndex.toString();
-        this.datasource.annotations.groups[0].items[0].text = this.highlights.uvIndex.toString();
-      },
-      deep: true
-    }
-  }
 };
 </script>
