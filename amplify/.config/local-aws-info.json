@@ -1,0 +1,7 @@
+{
+    "sharrenv": {
+        "configLevel": "project",
+        "useProfile": true,
+        "profileName": "sharr"
+    }
+}
