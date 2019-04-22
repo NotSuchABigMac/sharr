@@ -9,6 +9,11 @@ import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 import GammelTheme from 'fusioncharts/themes/fusioncharts.theme.gammel';
 import CandyTheme from 'fusioncharts/themes/fusioncharts.theme.candy';
 import VueFusionCharts from 'vue-fusioncharts';
+import Amplify, * as AmplifyModules from 'aws-amplify'
+import { AmplifyPlugin } from 'aws-amplify-vue'
+import awsmobile from './aws-exports'
+
+Amplify.configure(awsmobile)
 
 Charts(FusionCharts);
 PowerCharts(FusionCharts);
@@ -23,4 +28,4 @@ Vue.use(VueFusionCharts, FusionCharts);
 new Vue({
   el: '#app',
   render: h => h(App)
-})
+}).$mount('#app')

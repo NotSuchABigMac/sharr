@@ -1,0 +1,47 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "sharr-20190420070120-authRole",
+			"UnauthRoleArn": "arn:aws:iam::279180263681:role/sharr-20190420070120-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::279180263681:role/sharr-20190420070120-authRole",
+			"Region": "ap-southeast-2",
+			"DeploymentBucketName": "sharr-20190420070120-deployment",
+			"UnauthRoleName": "sharr-20190420070120-unauthRole",
+			"StackName": "sharr-20190420070120",
+			"StackId": "arn:aws:cloudformation:ap-southeast-2:279180263681:stack/sharr-20190420070120/48783b70-62e6-11e9-93cd-0a843035a916"
+		}
+	},
+	"auth": {
+		"cognito4295e4da": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/auth/cognito4295e4da-cloudformation-template.yml",
+				"logicalId": "authcognito4295e4da"
+			},
+			"lastPushTimeStamp": "2019-04-19T21:06:08.345Z",
+			"output": {
+				"IdentityPoolId": "ap-southeast-2:b83adcdc-daee-4e16-abbd-36be566b0ea8",
+				"IdentityPoolName": "sharr_identitypool_740a43f6__sharrenv"
+			},
+			"lastPushDirHash": "NsCkOwgLai1q9rQMIf4IajFiw0o="
+		}
+	},
+	"analytics": {
+		"sharr": {
+			"service": "Pinpoint",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+				"logicalId": "analyticssharr"
+			},
+			"lastPushTimeStamp": "2019-04-19T21:06:08.345Z",
+			"output": {
+				"appName": "sharr-sharrenv",
+				"Region": "us-west-2",
+				"Id": "321823b4d75c47d785b0874394c561a5"
+			},
+			"lastPushDirHash": "qYXacaGG6Vy3uRuD72PZLMdSyNs="
+		}
+	}
+}
