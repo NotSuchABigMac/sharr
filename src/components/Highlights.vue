@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import UVIndex from "./InteractiveCandlestick.vue";
-import Visibility from "./Visibility.vue";
+import UVIndex from "./InverseMSLine.vue";
+import Visibility from "./InteractiveCandlestick.vue";
 
 export default {
   props: ["highlights"],
