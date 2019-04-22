@@ -23,7 +23,8 @@ FusionTheme(FusionCharts);
 GammelTheme(FusionCharts);
 CandyTheme(FusionCharts);
 
-Vue.use(VueFusionCharts, FusionCharts, AmplifyPlugin, AmplifyModules);
+Vue.use(VueFusionCharts, FusionCharts);
+Vue.use(AmplifyPlugin, AmplifyModules);
 
 new Vue({
   el: '#app',
