@@ -12,6 +12,7 @@ import VueFusionCharts from 'vue-fusioncharts';
 import Amplify, * as AmplifyModules from 'aws-amplify'
 import { AmplifyPlugin } from 'aws-amplify-vue'
 import awsmobile from './aws-exports'
+import VueRouter from 'vue-router';
 
 Amplify.configure(awsmobile)
 
@@ -25,6 +26,7 @@ CandyTheme(FusionCharts);
 
 Vue.use(VueFusionCharts, FusionCharts);
 Vue.use(AmplifyPlugin, AmplifyModules);
+Vue.use(VueRouter)
 
 new Vue({
   el: '#app',
