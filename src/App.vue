@@ -9,7 +9,7 @@
                         :StockGraph="StockGraph"
                 ></dashboard-content>
                 <router-link to="/foo">Go to Foo</router-link>
-                <router-link to="/bar">Go to Bar</router-link>
+                <router-link to="/Stock">Go to Stock</router-link>
                 <router-view></router-view>
             </div>
         </div>
@@ -22,21 +22,13 @@
     import { AmplifyEventBus } from 'aws-amplify-vue';
     import VueRouter from 'vue-router';
 
-    const Foo = { template: '<div>foo</div>' }
-    const Bar = { template: '<div>bar</div>' }
-
-    const routes = [
-    { path: '/foo', component: Foo },
-    { path: '/bar', component: Bar }
-    ]
-
     const Stock = {
         template: Content
     }
 
     const router = new VueRouter({
         routes: [
-            { path: '/Content/:id', component: Stock }
+            { path: '/Stock', component: Stock }
         ]
     }) 
 
