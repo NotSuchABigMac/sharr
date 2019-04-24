@@ -1,6 +1,7 @@
-import Content from './components/Content.vue'
-import Home from './App.vue'
+import CandleChart from './components/CandleChart.vue'
+import Home from './components/Home.vue'
 import Highlights from './components/Highlights.vue'
+import Interactive from './components/InteractiveCandlestick.vue'
 
 export const routes=[
     {
@@ -10,6 +11,9 @@ export const routes=[
      path:'/highlights',component: Highlights
     },
     {
-     path:'/content',component: Content
+     path:'/CandleChart',component: CandleChart
+    },
+    {
+     path:'/Interactive',component: Interactive
     }
 ]
