@@ -12,6 +12,8 @@ import VueFusionCharts from 'vue-fusioncharts';
 import Amplify, * as AmplifyModules from 'aws-amplify'
 import { AmplifyPlugin } from 'aws-amplify-vue'
 import awsmobile from './aws-exports'
+import VueRouter from 'vue-router';
+import {routes} from './router'
 
 Amplify.configure(awsmobile)
 
@@ -25,8 +27,15 @@ CandyTheme(FusionCharts);
 
 Vue.use(VueFusionCharts, FusionCharts);
 Vue.use(AmplifyPlugin, AmplifyModules);
+Vue.use(VueRouter)
+
+let router = new VueRouter({mode: 'history', routes});
 
 new Vue({
   el: '#app',
-  render: h => h(App)
+  router,
+  render: h => h(App),
+  components: {
+    'app-home' : App
+  }
 }).$mount('#app')

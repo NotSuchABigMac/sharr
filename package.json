@@ -11,15 +11,16 @@
   },
   "dependencies": {
     "@syncfusion/ej2-charts": "^17.1.41",
-    "axios": "^0.18.0",
     "aws-amplify": "^1.1.26",
     "aws-amplify-vue": "^0.2.9",
+    "axios": "^0.18.0",
     "core-js": "^2.6.5",
     "fusioncharts": "^3.13.4",
     "moment-timezone": "^0.5.25",
     "npm": "^6.9.0",
     "vue": "^2.6.6",
-    "vue-fusioncharts": "^3.0.2"
+    "vue-fusioncharts": "^3.0.2",
+    "vue-router": "^3.0.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
