@@ -8,8 +8,9 @@
                         :highlights="highlights"
                         :StockGraph="StockGraph"
                 ></dashboard-content>
-                <router-link to="/foo">Go to Foo</router-link>
-                <router-link to="/Stock">Go to Stock</router-link>
+                <router-link to="/Content">Go to Content</router-link>
+                <router-link to="/">Go to Home</router-link>
+                <div>Router view should appear below this</div>
                 <router-view></router-view>
             </div>
         </div>
@@ -20,22 +21,11 @@
     import Content from './components/Content.vue';
     import { components } from 'aws-amplify-vue';
     import { AmplifyEventBus } from 'aws-amplify-vue';
-    import VueRouter from 'vue-router';
 
-    const Stock = {
-        template: Content
-    }
-
-    const router = new VueRouter({
-        routes: [
-            { path: '/Stock', component: Stock }
-        ]
-    }) 
 
     export default {
         name: 'app',
         props: [],
-        router: router,
         components: {
             'dashboard-content': Content
         },
