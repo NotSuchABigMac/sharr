@@ -67,6 +67,17 @@ body {
     background-color: #88BB88;
 }
 
+.homepage {
+    font-size:100px;
+    text-align: left;
+}
+
+.homepage > div {
+    text-align: right;
+    padding-right:5px;
+    color: #88BB88
+}
+
 #search {
     text-align: center;
     height: 20vh;
