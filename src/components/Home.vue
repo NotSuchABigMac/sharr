@@ -1,9 +1,13 @@
 <template>
-  <div class="custom-card header-card card">
-    <div class="card-body pt-0">
-      Homepage?
-    </div>
-    
+  <div class="homepage">
+    <br>
+    sharr
+    <br>
+    a new stock market
+    <br>
+    simulation experience...
+    <br>
+    <div>like no other</div>
   </div>
 </template>
 
