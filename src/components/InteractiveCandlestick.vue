@@ -40,7 +40,7 @@
         data: function() {
 return {
             width: "100%",
-            height: "800",
+            height: "600",
             type: "timeseries",
             dataFormat: "json",
             dataSource: {
