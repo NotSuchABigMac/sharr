@@ -125,21 +125,25 @@ export default {
 
           data.Items.forEach(function(stock) {
             var filteredStock = {
+              date: stock.datetime.substring(0,10),
               open: stock.open,
               high: stock.high,
               low: stock.low,
               close: stock.close,
-              x: index,
               volume: stock.volume,
             };
             stockPrices.push(filteredStock);
             index += 1;
           });
         }
+        stockPrices.forEach(function(price) {
+          console.log(price);
+        });
       });
     },
     setChartData: function(dataFetch) {
       Promise.all([dataFetch, schemaFetch]).then(res => {
+        console.log("Inside set chart data");
         const data = res[0];
         const schema = res[1];
         const fusionTable = new FusionCharts.DataStore().createDataTable(
