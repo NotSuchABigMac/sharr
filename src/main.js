@@ -13,7 +13,8 @@ import Amplify, * as AmplifyModules from 'aws-amplify'
 import { AmplifyPlugin } from 'aws-amplify-vue'
 import awsmobile from './aws-exports'
 import VueRouter from 'vue-router';
-import {routes} from './router'
+import {routes} from './router';
+import './css/style.css';
 
 Amplify.configure(awsmobile)
 
