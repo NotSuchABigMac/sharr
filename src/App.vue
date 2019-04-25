@@ -2,6 +2,7 @@
     <div id="ancestor">
         <div class="container-fluid" id="app">
             <div class="row">
+                <img src="./assets/Sharr.png" alt="Sharr Icon" style="width:10%;height:10%"/>
                 <router-link to="/"> Home         -</router-link>
                 <router-link to="/CandleChart"> Candle Chart        -</router-link>
                 <router-link to="/Highlights"> Highlights Chart         -</router-link>
