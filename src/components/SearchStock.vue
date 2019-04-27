@@ -1,6 +1,16 @@
 <template>
   <div class="custom-card header-card card">
     <div class="card-body pt-0">
+      <div id=searchnavbar>
+        <div class=backicon>
+            <img src="../assets/backbutton.png"/>
+        </div>
+        <div class=SearchBox>
+            <form action="submit" class=submitform>
+              <input type="text" name="searchStock" class=searchStock>
+            </form>
+        </div>
+      </div>
       <fusioncharts
         type="candlestick"
         width="100%"
