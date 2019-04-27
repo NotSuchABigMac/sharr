@@ -8,9 +8,9 @@
                 <div>
                 <ul>
                     <li><router-link to="/"> Home </router-link></li>
-                    <li><router-link to="/CandleChart"> Candle Chart</router-link></li>
-                    <li><router-link to="/Highlights"> Highlights Chart</router-link></li>
-                    <li><router-link to="/Interactive"> Interactive Chart </router-link></li>
+                    <li><router-link to="/SearchStock"> Search Stock </router-link></li>
+                    <li><router-link to="/ViewStock"> View Stock </router-link></li>
+                    <li><router-link to="/Null"> Null </router-link></li>
                 </ul>
                 </div>
                 </div>
@@ -21,7 +21,6 @@
 </template>
 
 <script>
-    import Content from './components/Content.vue';
     import { components } from 'aws-amplify-vue';
     import { AmplifyEventBus } from 'aws-amplify-vue';
 
@@ -30,7 +29,6 @@
         name: 'app',
         props: [],
         components: {
-            'dashboard-content': Content
         },
         data() {
             return {
