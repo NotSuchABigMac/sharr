@@ -1,12 +1,22 @@
 <template>
     <div class="custom-card header-card card">
         <div class="card-body pt-0">
-            <div class=stock-price-box>
-                <div class=live-price>
-                    204.53
+            <div class=mobile-navbar>
+                <div class=backicon>
+                    <img src="../assets/backbutton.png"/>
                 </div>
-                <div class=price-change>
-                    USD 0.00 (0.00%)
+                <div class=textbox>
+                    Apple
+                </div>
+            </div>
+            <div class=stock-price-box>
+                <div class=firstline>
+                    <div class=live-price>
+                        204.53
+                    </div>
+                    <div class=price-change>
+                        USD 0.00 (0.00%)
+                    </div>
                 </div>
                 <div class=price-details>
                     Closed: 23 Apr, 8:46 am GMT-4 - Disclaimer <br>
@@ -14,7 +24,17 @@
                 </div>
             </div>
 
-            <fusioncharts
+            <div class=buttons>
+                <div class=buy-button>
+                    Buy
+                </div>
+                <div class=sell-button>
+                    Sell
+                </div>
+            </div>
+
+            <div class=fusioncharts>
+                <fusioncharts
                     :type="type"
                     :width="width"
                     :height="height"
@@ -22,7 +42,8 @@
                     dataEmptyMessage="i-https://i.postimg.cc/R0QCk9vV/Rolling-0-9s-99px.gif"
                     dataEmptyMessageImageScale=39
                     :dataSource="dataSource"
-            ></fusioncharts>
+                ></fusioncharts>
+            </div>
         </div>
     </div>
 </template>
