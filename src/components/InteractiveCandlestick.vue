@@ -1,6 +1,19 @@
 <template>
     <div class="custom-card header-card card">
         <div class="card-body pt-0">
+            <div class=stock-price-box>
+                <div class=live-price>
+                    204.53
+                </div>
+                <div class=price-change>
+                    USD 0.00 (0.00%)
+                </div>
+                <div class=price-details>
+                    Closed: 23 Apr, 8:46 am GMT-4 - Disclaimer <br>
+                    Pre-market 204.10 -0.43 (0.21%)
+                </div>
+            </div>
+
             <fusioncharts
                     :type="type"
                     :width="width"
@@ -11,7 +24,6 @@
                     :dataSource="dataSource"
             ></fusioncharts>
         </div>
-
     </div>
 </template>
 

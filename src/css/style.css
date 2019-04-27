@@ -19,6 +19,10 @@ body {
     background-image: linear-gradient(-180deg, #80b6db 0%, #7da7e2 100%);
 }
 
+.stock-price-box {
+    border-radius: 25px
+}
+
 .navbar {
     text-align: center;
     width: 100%;
