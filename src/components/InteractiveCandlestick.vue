@@ -38,13 +38,7 @@
 import FusionCharts from "fusioncharts";
 import { async } from 'q';
 import { config, DynamoDB } from 'aws-sdk';
-/* function printObject(o) {
-    var out = '';
-    for (var p in o) {
-        out += p + ': ' + o[p] + '\n';
-    }
-    alert("alert Out" + out.toString());
-}*/
+
 var jsonify = res => res.json();
 var schemaFetch = fetch(
   "https://s3.eu-central-1.amazonaws.com/fusion.store/ft/schema/candlestick-chart-schema.json"
@@ -102,6 +96,7 @@ export default {
         secretAccessKey: '9ADQWC39yq/7CYxcTX5tR1bDew+BH9nFxMoxCpxL'
       });
       var docClient = new AWS.DynamoDB.DocumentClient();
+      var stockPrices = [];
 
       var params = {
         TableName : "StockPrices",
@@ -120,26 +115,35 @@ export default {
           });
           console.log("Scan succeeded.");
 
-          var stockPrices = [];
-          var index = 1;
-
           data.Items.forEach(function(stock) {
             var filteredStock = {
-              date: stock.datetime.substring(0,10),
-              open: stock.open,
-              high: stock.high,
-              low: stock.low,
-              close: stock.close,
-              volume: stock.volume,
+              Date: stock.datetime.substring(0,10),
+              Open: stock.open,
+              High: stock.high,
+              Low: stock.low,
+              Close: stock.close,
+              Volume: stock.volume,
             };
             stockPrices.push(filteredStock);
-            index += 1;
+          });
+          Promise.all([stockPrices, schemaFetch]).then(res => {
+            console.log("Inside set chart data");
+            const data = res[0];
+            const schema = res[1];
+            console.log(data);
+            console.log(schema);
+            const fusionTable = new FusionCharts.DataStore().createDataTable(
+              data,
+              schema
+            );
+            console.log(fusionTable);
+            dataSource.data = fusionTable;
           });
         }
-        stockPrices.forEach(function(price) {
-          console.log(price);
-        });
+        // stockPrices.forEach(function(price) {
+        //   console.log(price);
       });
+        // });
     },
     setChartData: function(dataFetch) {
       Promise.all([dataFetch, schemaFetch]).then(res => {
@@ -156,12 +160,12 @@ export default {
     }
   },
   mounted: function() {
-    this.setChartData();
+    // this.setChartData();
   },
   watch: {
     tempVar: {
       handler: function() {
-        this.setChartData();
+        // this.setChartData();
       },
       deep: true
     },
