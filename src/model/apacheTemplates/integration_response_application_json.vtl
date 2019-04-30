@@ -1,0 +1,16 @@
+#set($inputRoot = $input.path('$'))
+[
+#foreach($item in $input.path('$.Items'))
+  [
+#set($string = "$item.get('datetime').get('S')")
+#set($date = $string.substring(0,10))
+    "$date",
+    $item.get('open').get('N'),
+    $item.get('high').get('N'),
+    $item.get('low').get('N'),
+    $item.get('close').get('N'),
+    $item.get('volume').get('N')
+  ]
+#if($foreach.hasnNext),#end
+#end    
+]
