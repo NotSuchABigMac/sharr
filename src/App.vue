@@ -2,12 +2,19 @@
     <div id="ancestor">
         <div class="container-fluid" id="app">
             <div class="row">
-                <dashboard-content
-                        class="col-md-9 col-sm-8 col-xs-12 content"
-                        id="dashboard-content"
-                        :highlights="highlights"
-                        :StockGraph="StockGraph"
-                ></dashboard-content>
+                <div class="navbar">
+                <img src="./assets/Sharr.png" alt="Sharr Icon" style="width:7.5%;height:7.5%"/>
+                <br>
+                <div>
+                <ul>
+                    <li><router-link to="/"> Home </router-link></li>
+                    <li><router-link to="/CandleChart"> Candle Chart</router-link></li>
+                    <li><router-link to="/Highlights"> Highlights Chart</router-link></li>
+                    <li><router-link to="/Interactive"> Interactive Chart </router-link></li>
+                </ul>
+                </div>
+                </div>
+                <router-view></router-view>
             </div>
         </div>
     </div>
