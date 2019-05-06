@@ -190,10 +190,8 @@ body {
 .navbar > div > ul > li {
     float: left;
     display: inline-block;
-    color: white;
-    
+    color: white;  
     text-align: center;
-    align:center;
     padding: 14px 16px;
     text-decoration: none;
 }
