@@ -55,6 +55,139 @@ body {
     padding-top:1.5vh;
 }
 
+.stock-price-purchase-box {
+    border: solid #000;
+    margin-left:15%;
+    margin-right:15%;
+    border-radius: 10px;
+    border-width: 1px;
+    margin-top:5%;
+    margin-bottom:20%;
+    font-size:20px;
+    height: 50px;
+}
+
+.order-type-box {
+    overflow: hidden;
+    height: 150px;
+}
+
+.order-type-box > .label {
+    float:left;
+    margin-left:40px;
+}
+
+.order-type-box > .buy-button {
+    float:left;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left:15%;
+    font-size: 4vmin;
+    border-radius: 20px;
+    background-color:#0DC800;
+    color: white;
+}
+
+.order-type-box > .sell-button {
+    float: left;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-right:15%;
+    font-size: 4vmin;
+    border-radius: 20px;
+    background-color:#F56363;
+    color: white;
+}
+
+.purchase-by-box {
+    overflow: hidden;
+    height: 150px;
+}
+
+.purchase-by-box > .label {
+    float:left;
+    margin-left:40px;
+}
+
+.purchase-by-box > .buy-button {
+    float: left;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left:15%;
+    font-size: 4vmin;
+    border-radius: 20px;
+    background-color:#0DC800;
+    color: white;
+}
+
+.purchase-by-box > .sell-button {
+    float: left;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-right:15%;
+    font-size: 4vmin;
+    border-radius: 20px;
+    background-color:#F56363;
+    color: white;
+}
+
+.share-price-box {
+    overflow: hidden;
+    height: 150px;
+}
+
+.share-price-box > .label {
+    float:left;
+    margin-left:40px;
+}
+
+.share-price-box > .buy-button {
+    float: left;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left:15%;
+    font-size: 4vmin;
+    border-radius: 20px;
+    background-color:#0DC800;
+    color: white;
+}
+
+.share-price-box > .sell-button {
+    float: left;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-right:15%;
+    font-size: 4vmin;
+    border-radius: 20px;
+    background-color:#F56363;
+    color: white;
+}
+
+.review-order > .review-button {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-right:15%;
+    margin-left:15%;
+    font-size: 4vmin;
+    border-radius: 20px;
+    background-color:#3C5A99;
+    color: white;
+}
+
 .fusioncharts {
     padding:1%;
     padding-top:10%;
@@ -67,7 +200,7 @@ body {
     float: left;
     padding-top: 1%;
     padding-bottom: 1%;
-    padding-left: 10%;
+    padding-left:10%;
     padding-right: 10%;
     margin-left:15%;
     font-size: 4vmin;
@@ -91,7 +224,7 @@ body {
 
 .mobile-navbar {
     background-color: #3C5A99;
-    padding: 30px;
+    padding: 25px;
     margin: 0px;
 }
 
