@@ -18,6 +18,7 @@
     "core-js": "^2.6.5",
     "fusioncharts": "^3.13.4",
     "moment-timezone": "^0.5.25",
+    "node-fetch": "^2.5.0",
     "npm": "^6.9.0",
     "vue": "^2.6.6",
     "vue-fusioncharts": "^3.0.2",
