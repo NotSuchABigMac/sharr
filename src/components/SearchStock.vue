@@ -12,57 +12,72 @@
         </div>
       </div>
       <div class=searchresults>
-        <div class=resultslistheader>
-          <br><br>
-          You searched for a stock,
-          here are your results:
+        <div class=results id=result1>
+          <div class=firstline>
+            <div class=stock-name>
+                Apple
+            </div>
+          </div>
+            <div class=stock-code>
+              NASDAQ: AABA
+            </div>
+            <div class=third-line>
+                <div class=stock-price>
+                    75.37
+                </div>
+                <div class=stock-change>
+                    USD +0.00 (0.00)
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>
+        </div>
+         <div class=results id=result1>
+          <div class=firstline>
+            <div class=stock-name>
+                Aardvark
+            </div>
+          </div>
+            <div class=stock-code>
+              NASDAQ: AABA
+            </div>
+            <div class=third-line>
+                <div class=stock-price>
+                    75.37
+                </div>
+                <div class=stock-change>
+                    USD +0.00 (0.00)
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>
         </div>
         <div class=results id=result1>
           <div class=firstline>
-              <div class=live-price>
-                  204.53
-              </div>
-              <div class=price-change>
-                  USD 0.00 (0.00%)
-              </div>
+            <div class=stock-name>
+                Aaron
+            </div>
           </div>
-          <div class=price-details>
-              Closed: 23 Apr, 8:46 am GMT-4 - Disclaimer <br>
-              Pre-market 204.10 -0.43 (0.21%)
-          </div>
+            <div class=stock-code>
+              NASDAQ: AABA
+            </div>
+            <div class=third-line>
+                <div class=stock-price>
+                    75.37
+                </div>
+                <div class=stock-change>
+                    USD +0.00 (0.00)
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>
         </div>
-        <div class=results id=result2>
-          <div class=firstline>
-              <div class=live-price>
-                  204.53
-              </div>
-              <div class=price-change>
-                  USD 0.00 (0.00%)
-              </div>
-          </div>
-          <div class=price-details>
-              Closed: 23 Apr, 8:46 am GMT-4 - Disclaimer <br>
-              Pre-market 204.10 -0.43 (0.21%)
-          </div>
-        </div>
-        <div class=results id=result3>
-          <div class=firstline>
-              <div class=live-price>
-                  204.53
-              </div>
-              <div class=price-change>
-                  USD 0.00 (0.00%)
-              </div>
-          </div>
-          <div class=price-details>
-              Closed: 23 Apr, 8:46 am GMT-4 - Disclaimer <br>
-              Pre-market 204.10 -0.43 (0.21%)
-          </div>
         </div>
       </div>
     </div>
-    
-  </div>
 </template>
 
 <script>
