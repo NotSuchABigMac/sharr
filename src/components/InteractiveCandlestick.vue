@@ -28,9 +28,9 @@
                     dataEmptyMessage="i-https://i.postimg.cc/R0QCk9vV/Rolling-0-9s-99px.gif"
                     dataEmptyMessageImageScale=39
                     :dataSource="dataSource"
-            ></fusioncharts>
+                ></fusioncharts>
+            </div>
         </div>
-
     </div>
 </template>
 

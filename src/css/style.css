@@ -4,12 +4,17 @@
     font-size: 62.5%;
 }
 
+h2  {
+    margin:0;
+}
+
 body {
     font-family: Roboto;
     font-weight: 400;
     width: 100%;
     margin: 0;
     font-size: 1.6rem;
+    padding-top:0px;
 }
 
 #sidebar {
@@ -19,9 +24,105 @@ body {
     background-image: linear-gradient(-180deg, #80b6db 0%, #7da7e2 100%);
 }
 
+.stock-price-box {
+    border: solid #000;
+    margin-left:15%;
+    margin-right:15%;
+    border-radius: 10px;
+    border-width: 1px;
+    margin-top:5%;
+    margin-bottom:5%;
+    font-size:20px;
+}
+
+.stock-price-box > .firstline {
+    width: 100%;
+    height: 4vh;
+}
+
+.stock-price-box > .firstline >.live-price {
+    float: left;
+    padding-left: 5%;
+    font-size: 225%;
+    height: 37px;
+}
+
+.stock-price-box > .firstline >.price-change {
+    float: right;
+    padding-right: 10%;
+    font-size: 100%;
+    height: 37px;
+    padding-top:1.5vh;
+}
+
+.fusioncharts {
+    padding:1%;
+    padding-top:10%;
+}
+.buttons {
+    height: 20%;
+}
+
+.buttons > .buy-button {
+    float: left;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left:15%;
+    font-size: 4vmin;
+    border-radius: 20px;
+    background-color:#0DC800;
+    color: white;
+}
+
+.buttons > .sell-button {
+    float: right;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-right:15%;
+    font-size: 4vmin;
+    border-radius: 20px;
+    background-color:#F56363;
+    color: white;
+}
+
+.mobile-navbar {
+    background-color: #3C5A99;
+    padding: 30px;
+    margin: 0px;
+}
+
+.mobile-navbar > .backicon {
+    float: left;
+    padding: 1%;
+}
+.mobile-navbar > .textbox {
+    font-size: 34px;
+    color:white;
+    padding-left:70px;
+    text-align:left;
+}
+
 .navbar {
     text-align: center;
     width: 100%;
+    padding-top: 2%;
+
+}
+
+.navbar > div > ul > li >a:visited{
+    color:white;
+}
+
+.navbar > div > ul > li >a:link{
+    color:white;
+}
+
+.navbar > div > ul > li >a:active{
+    background-color: #0000ff;
 }
 
 .navbar > img {
@@ -31,7 +132,7 @@ body {
 
 .navbar > div {
     width:100%;
-    background-color: #88BB88;
+    background-color: #3C5A99;
     height:5vh;
     line-height:3vh;
     font-weight:bold;
@@ -46,7 +147,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #88BB88;
+    background-color: #3C5A99;
     position: relative;
     text-align: center;
     display: inline-block;
@@ -56,7 +157,8 @@ body {
 .navbar > div > ul > li {
     float: left;
     display: inline-block;
-    color: black;
+    color: white;
+    
     text-align: center;
     align:center;
     padding: 14px 16px;
@@ -64,7 +166,7 @@ body {
 }
   
 .navbar > li a:hover:not(.active) {
-    background-color: #88BB88;
+    background-color: #3C5A99;
 }
 
 .homepage {
@@ -185,6 +287,10 @@ body {
     border: none;
 }
 
+#app {
+    margin: 0px;
+}
+
 #dashboard-content {
     text-align: center;
     height: 100vh;
@@ -244,7 +350,7 @@ body {
 .custom-card {
     background-color: #FFFFFF !important;
     border: 0 !important;
-    margin-top: 16px !important;
+    margin-top: 0px !important;
     margin-bottom: 20px !important;
 }
 
@@ -314,6 +420,7 @@ hr {
     line-height: 0.5px;
 }
 
+/* Below will occur only on screens bigger than 768px */
 @media only screen and (min-width: 768px) {
     #sidebar {
         height: 100vh;
@@ -329,8 +436,13 @@ hr {
     .wrapper-right {
         margin-top: 80px;
     }
+    
+    .mobile-navbar {
+        display: none;
+    }
 }
 
+/* Below will occur only on screens bigger than 1440px */
 @media only screen and (min-width:1440px) {
     #sidebar {
         width: 350px;
@@ -342,5 +454,13 @@ hr {
         width: calc(100% - 350px);
         max-width: calc(100% - 350px);
         flex: auto;
+    }
+}
+
+
+/* Below will occur only on screens smaller than 768px */
+@media only screen and (max-width:768px) {
+    .navbar {
+        display: none;
     }
 }
