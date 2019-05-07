@@ -24,11 +24,13 @@
                 <div class=label>
                     Order by:
                 </div>
-                <div class=buy-button>
-                    Buy
-                </div>
-                <div class=sell-button>
-                    Sell
+                <div class=button-container>
+                    <div class=buy-button>
+                        Buy
+                    </div>
+                    <div class=sell-button>
+                        Sell
+                    </div>
                 </div>
             </div>
 
@@ -36,29 +38,34 @@
                 <div class=label>
                     Purchase by:
                 </div>
-                <div class=buy-button>
-                    Buy
-                </div>
-                <div class=sell-button>
-                    Sell
+                <div class=button-container>
+                    <div class=buy-button>
+                        Buy
+                    </div>
+                    <div class=sell-button>
+                        Sell
+                    </div>
                 </div>
             </div>
 
             <div class=share-price-box>
                 <div class=label>
                     Share Price:
-                </div>                
-                <div class=buy-button>
-                    Buy
                 </div>
-                <div class=sell-button>
-                    Sell
+                <div class=button-container>                
+                    <div class=buy-button>
+                        Buy
+                    </div>
+                    <div class=sell-button>
+                        Sell
+                    </div>
                 </div>
             </div>
 
             <div class=review-order>
                 <div class=review-button>
-                    Review Order
+                    <span class review-button-span>Review Order</span>
+                    
                 </div>
             </div>
         </div>

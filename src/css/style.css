@@ -24,6 +24,45 @@ body {
     background-image: linear-gradient(-180deg, #80b6db 0%, #7da7e2 100%);
 }
 
+.order-type-box {
+    overflow: hidden;
+    height: 150px;
+}
+
+.order-type-box > .button-container {
+    float:right;
+    width:228px;
+}
+
+.order-type-box > .label {
+    float:left;
+    margin-left:4px;
+    font-size:20px;
+}
+
+.order-type-box > .button-container > .buy-button {
+    float: left;
+    width:106px;
+    height: 46px;
+    font-size: 4vmin;
+    border-radius:8px;
+    background-color:#0DC800;
+    color: white;
+    line-height: 300%;
+}
+
+.order-type-box > .button-container > .sell-button {
+    float: left;
+    width:106px;
+    height: 46px;
+    margin-left:8px;
+    font-size: 4vmin;
+    border-radius:8px;
+    background-color:#F56363;
+    color: white;
+    line-height: 300%;
+}
+
 .stock-price-box {
     border: solid #000;
     margin-left:15%;
@@ -67,76 +106,43 @@ body {
     height: 50px;
 }
 
-.order-type-box {
-    overflow: hidden;
-    height: 150px;
-}
-
-.order-type-box > .label {
-    float:left;
-    margin-left:40px;
-}
-
-.order-type-box > .buy-button {
-    float:left;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-left:15%;
-    font-size: 4vmin;
-    border-radius: 20px;
-    background-color:#0DC800;
-    color: white;
-}
-
-.order-type-box > .sell-button {
-    float: left;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-right:15%;
-    font-size: 4vmin;
-    border-radius: 20px;
-    background-color:#F56363;
-    color: white;
-}
-
 .purchase-by-box {
     overflow: hidden;
     height: 150px;
 }
 
+.purchase-by-box > .button-container {
+    float:right;
+    width:228px;
+}
+
 .purchase-by-box > .label {
     float:left;
-    margin-left:40px;
+    margin-left:4px;
+    font-size:20px;
 }
 
-.purchase-by-box > .buy-button {
+.purchase-by-box > .button-container > .buy-button {
     float: left;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-left:15%;
+    width:106px;
+    height: 46px;
     font-size: 4vmin;
-    border-radius: 20px;
+    border-radius:8px;
     background-color:#0DC800;
     color: white;
+    line-height: 300%;
 }
 
-.purchase-by-box > .sell-button {
+.purchase-by-box > .button-container > .sell-button {
     float: left;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-right:15%;
+    width:106px;
+    height: 46px;
+    margin-left:8px;
     font-size: 4vmin;
-    border-radius: 20px;
+    border-radius:8px;
     background-color:#F56363;
     color: white;
+    line-height: 300%;
 }
 
 .share-price-box {
@@ -144,48 +150,54 @@ body {
     height: 150px;
 }
 
+.share-price-box > .button-container {
+    float:right;
+    width:228px;
+}
+
 .share-price-box > .label {
     float:left;
-    margin-left:40px;
+    margin-left:4px;
+    font-size:20px;
 }
 
-.share-price-box > .buy-button {
+.share-price-box > .button-container > .buy-button {
     float: left;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-left:15%;
+    width:106px;
+    height: 46px;
     font-size: 4vmin;
-    border-radius: 20px;
+    border-radius:8px;
     background-color:#0DC800;
     color: white;
+    line-height: 300%;
 }
 
-.share-price-box > .sell-button {
+.share-price-box > .button-container > .sell-button {
     float: left;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-right:15%;
+    width:106px;
+    height: 46px;
+    margin-left:8px;
     font-size: 4vmin;
-    border-radius: 20px;
+    border-radius:8px;
     background-color:#F56363;
     color: white;
+    line-height: 300%;
+}
+
+.review-order {
+    text-align: center;
 }
 
 .review-order > .review-button {
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-right:15%;
-    margin-left:15%;
+    height:46px;
+    width:187px;
+    display:inline-block;
     font-size: 4vmin;
-    border-radius: 20px;
+    border-radius:8px;
     background-color:#3C5A99;
     color: white;
+    vertical-align: middle;
+    line-height: 300%;
 }
 
 .fusioncharts {
@@ -204,7 +216,7 @@ body {
     padding-right: 10%;
     margin-left:15%;
     font-size: 4vmin;
-    border-radius: 20px;
+    border-radius:8px;
     background-color:#0DC800;
     color: white;
 }
@@ -217,7 +229,7 @@ body {
     padding-right: 10%;
     margin-right:15%;
     font-size: 4vmin;
-    border-radius: 20px;
+    border-radius:8px;
     background-color:#F56363;
     color: white;
 }
