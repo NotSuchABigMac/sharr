@@ -46,6 +46,12 @@
                         Sell
                     </div>
                 </div>
+                <div class=label2>
+                    Quantity:
+                </div>
+                <div class=entry>
+                    <input type="text">
+                </div>
             </div>
 
             <div class=share-price-box>
@@ -59,6 +65,12 @@
                     <div class=sell-button>
                         Sell
                     </div>
+                </div>
+                <div class=label2>
+                    Limit Price:
+                </div>
+                <div class=entry>
+                    <input type="text">
                 </div>
             </div>
 
