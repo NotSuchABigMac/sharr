@@ -26,7 +26,9 @@ body {
 
 .order-type-box {
     overflow: hidden;
-    height: 150px;
+    height: 75px;
+    padding-top:25px;
+    border-top:solid 1px;
 }
 
 .order-type-box > .button-container {
@@ -38,29 +40,30 @@ body {
     float:left;
     margin-left:4px;
     font-size:20px;
+    line-height: 200%;
 }
 
 .order-type-box > .button-container > .buy-button {
     float: left;
     width:106px;
     height: 46px;
-    font-size: 4vmin;
+    font-size: 30px;
     border-radius:8px;
     background-color:#0DC800;
     color: white;
-    line-height: 300%;
+    line-height: 150%;
 }
 
 .order-type-box > .button-container > .sell-button {
     float: left;
     width:106px;
     height: 46px;
+    font-size: 30px;
     margin-left:8px;
-    font-size: 4vmin;
     border-radius:8px;
     background-color:#F56363;
     color: white;
-    line-height: 300%;
+    line-height: 150%;
 }
 
 .stock-price-box {
@@ -108,7 +111,9 @@ body {
 
 .purchase-by-box {
     overflow: hidden;
-    height: 150px;
+    height: 125px;
+    padding-top:25px;
+    border-top:solid 1px;
 }
 
 .purchase-by-box > .button-container {
@@ -120,17 +125,18 @@ body {
     float:left;
     margin-left:4px;
     font-size:20px;
+    line-height: 200%;
 }
 
 .purchase-by-box > .button-container > .buy-button {
     float: left;
     width:106px;
     height: 46px;
-    font-size: 4vmin;
+    font-size: 30px;
     border-radius:8px;
     background-color:#0DC800;
     color: white;
-    line-height: 300%;
+    line-height: 150%;
 }
 
 .purchase-by-box > .button-container > .sell-button {
@@ -138,16 +144,18 @@ body {
     width:106px;
     height: 46px;
     margin-left:8px;
-    font-size: 4vmin;
+    font-size: 30px;
     border-radius:8px;
     background-color:#F56363;
     color: white;
-    line-height: 300%;
+    line-height: 150%;
 }
 
 .share-price-box {
     overflow: hidden;
-    height: 150px;
+    height: 125px;
+    padding-top:25px;
+    border-top:solid 1px;
 }
 
 .share-price-box > .button-container {
@@ -159,17 +167,18 @@ body {
     float:left;
     margin-left:4px;
     font-size:20px;
+    line-height: 200%;
 }
 
 .share-price-box > .button-container > .buy-button {
     float: left;
     width:106px;
     height: 46px;
-    font-size: 4vmin;
+    font-size: 30px;
     border-radius:8px;
     background-color:#0DC800;
     color: white;
-    line-height: 300%;
+    line-height: 150%;
 }
 
 .share-price-box > .button-container > .sell-button {
@@ -177,15 +186,17 @@ body {
     width:106px;
     height: 46px;
     margin-left:8px;
-    font-size: 4vmin;
+    font-size: 30px;
     border-radius:8px;
     background-color:#F56363;
     color: white;
-    line-height: 300%;
+    line-height: 150%;
 }
 
 .review-order {
     text-align: center;
+    padding-top:25px;
+    border-top:solid 1px;
 }
 
 .review-order > .review-button {
