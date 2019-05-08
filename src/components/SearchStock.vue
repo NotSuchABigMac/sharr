@@ -61,7 +61,7 @@
             </div>
           </div>
             <div class=stock-code>
-              NASDAQ: AABA
+                NASDAQ: AABA
             </div>
             <div class=third-line>
                 <div class=stock-price>
@@ -127,6 +127,7 @@ export default {
   props: ["StockGraph"],
   components: {},
   methods: {
+    
   },
   mounted:"",
   watch: {

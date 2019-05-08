@@ -12,10 +12,10 @@
             <div class=stock-price-purchase-box>
                 <div class=firstline>
                     <div class=live-price>
-                        204.53
+                        204.53 USD
                     </div>
                     <div class=price-change>
-                        USD 0.00 (0.00%)
+                        0.00 (0.00%)
                     </div>
                 </div>
             </div>
@@ -40,10 +40,10 @@
                 </div>
                 <div class=button-container>
                     <div class=buy-button>
-                        Buy
+                        Quantity
                     </div>
                     <div class=sell-button>
-                        Sell
+                        Value
                     </div>
                 </div>
                 <div class=label2>
@@ -60,10 +60,10 @@
                 </div>
                 <div class=button-container>                
                     <div class=buy-button>
-                        Buy
+                        Limit
                     </div>
                     <div class=sell-button>
-                        Sell
+                        Market
                     </div>
                 </div>
                 <div class=label2>

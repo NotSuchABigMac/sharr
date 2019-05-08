@@ -49,6 +49,7 @@ body {
     height: 46px;
     font-size: 30px;
     border-radius:8px;
+    border:solid 1px #0DC800;
     background-color:#0DC800;
     color: white;
     line-height: 150%;
@@ -61,8 +62,9 @@ body {
     font-size: 30px;
     margin-left:8px;
     border-radius:8px;
-    background-color:#F56363;
-    color: white;
+    border:solid 1px #F56363;
+    background-color:#FFFFFF;
+    color: #F56363;
     line-height: 150%;
 }
 
@@ -155,11 +157,12 @@ body {
     float: left;
     width:106px;
     height: 46px;
-    font-size: 30px;
+    font-size: 25px;
     border-radius:8px;
-    background-color:#0DC800;
+    border:solid 1px #3c5a99;
+    background-color:#3c5a99;
     color: white;
-    line-height: 150%;
+    line-height: 170%;
 }
 
 .purchase-by-box > .button-container > .sell-button {
@@ -167,11 +170,12 @@ body {
     width:106px;
     height: 46px;
     margin-left:8px;
-    font-size: 30px;
+    font-size: 25px;
     border-radius:8px;
-    background-color:#F56363;
-    color: white;
-    line-height: 150%;
+    border:solid 1px #3c5a99;
+    background-color:#FFFFFF;
+    color: #3c5a99;
+    line-height: 170%;
 }
 
 .share-price-box {
@@ -220,11 +224,12 @@ body {
     float: left;
     width:106px;
     height: 46px;
-    font-size: 30px;
+    font-size: 25px;
     border-radius:8px;
-    background-color:#0DC800;
+    border:solid 1px #3c5a99;
+    background-color:#3c5a99;
     color: white;
-    line-height: 150%;
+    line-height: 180%;
 }
 
 .share-price-box > .button-container > .sell-button {
@@ -232,11 +237,12 @@ body {
     width:106px;
     height: 46px;
     margin-left:8px;
-    font-size: 30px;
+    font-size: 25px;
     border-radius:8px;
-    background-color:#F56363;
-    color: white;
-    line-height: 150%;
+    border:solid 1px #3c5a99;
+    background-color:#FFFFFF;
+    color: #3c5a99;
+    line-height: 180%;
 }
 
 .review-order {
@@ -249,12 +255,12 @@ body {
     height:46px;
     width:187px;
     display:inline-block;
-    font-size: 4vmin;
+    font-size: 25px;
     border-radius:8px;
     background-color:#3C5A99;
     color: white;
     vertical-align: middle;
-    line-height: 300%;
+    line-height: 175%;
 }
 
 .fusioncharts {

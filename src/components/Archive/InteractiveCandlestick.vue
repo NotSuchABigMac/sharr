@@ -118,6 +118,7 @@ return {
                     //alert("alert Out2.5:" + fusionTable.toString());
                 });
             },
+            
         },
         mounted: function() {
             this.setChartData();
