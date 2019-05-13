@@ -61,7 +61,7 @@
                 </div>
                 <div class=button-container>                
                     <div class=buy-button>
-                        Limit
+                        Minimum
                     </div>
                     <div class=sell-button>
                         Market

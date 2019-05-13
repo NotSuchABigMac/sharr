@@ -68,6 +68,31 @@ body {
     line-height: 150%;
 }
 
+.order-type-box > .button-container > .buy-button {
+    float: left;
+    width:106px;
+    height: 46px;
+    font-size: 30px;
+    border-radius:8px;
+    border:solid 1px #0DC800;
+    background-color:white;
+    color: #0DC800;
+    line-height: 150%;
+}
+
+.order-type-box > .button-container > .sell-button {
+    float: left;
+    width:106px;
+    height: 46px;
+    font-size: 30px;
+    margin-left:8px;
+    border-radius:8px;
+    border:solid 1px #F56363;
+    background-color:#F56363;
+    color: #FFFFFF;
+    line-height: 150%;
+}
+
 .stock-price-box {
     border: solid #000;
     margin-left:15%;
@@ -463,7 +488,7 @@ body {
 .homepage > div {
     text-align: right;
     padding-right:5px;
-    color: #88BB88
+    color: #3C5A99
 }
 
 #search {
