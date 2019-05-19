@@ -11,7 +11,7 @@
                     @keyup.enter="searchSymbol"
                 >
                 <button 
-                    id="search-btn" 
+                    id="search-btn"
                 >
                     <img 
                         src="../assets/search.svg" 
@@ -138,6 +138,3 @@ watch: {
 },
 };
 </script>
-
-<style>
-</style>
