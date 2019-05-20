@@ -1,4 +1,9 @@
 {
-	"auth": {},
+	"auth": {
+		"SharrAuth": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	},
 	"analytics": {}
 }

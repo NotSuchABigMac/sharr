@@ -11,6 +11,26 @@
 			"StackId": "arn:aws:cloudformation:ap-southeast-2:279180263681:stack/sharr-20190420070120/48783b70-62e6-11e9-93cd-0a843035a916"
 		}
 	},
-	"auth": {},
+	"auth": {
+		"SharrAuth": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/auth/SharrAuth-cloudformation-template.yml",
+				"logicalId": "authSharrAuth"
+			},
+			"lastPushTimeStamp": "2019-05-20T10:52:20.951Z",
+			"output": {
+				"AppClientSecret": "1flp0l96iutju3ko79f6lnhinsl7bahu9sgksgl15kg4mhfkr662",
+				"UserPoolId": "ap-southeast-2_46PvLC9tZ",
+				"AppClientIDWeb": "4valinv83h4ifa2grri6ffeqct",
+				"AppClientID": "4ihjmkidae1c9uab80tu08s4ls",
+				"IdentityPoolId": "ap-southeast-2:cb6d8253-7b75-42a3-91b3-04a0f9908cea",
+				"IdentityPoolName": "SharrIDPool__sharrenv",
+				"UserPoolName": "SharrUserPool"
+			},
+			"lastPushDirHash": "RtD4G3QPbFK+19xQNIgqmoKQKYQ="
+		}
+	},
 	"analytics": {}
 }

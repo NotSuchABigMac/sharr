@@ -1,14 +1,9 @@
 {
 	"auth": {
-		"cognito4295e4da": {
+		"SharrAuth": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation"
 		}
 	},
-	"analytics": {
-		"sharr": {
-			"service": "Pinpoint",
-			"providerPlugin": "awscloudformation"
-		}
-	}
+	"analytics": {}
 }
