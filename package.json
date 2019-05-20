@@ -12,8 +12,9 @@
   },
   "dependencies": {
     "@syncfusion/ej2-charts": "^17.1.41",
-    "aws-amplify": "^1.1.26",
-    "aws-amplify-vue": "^0.2.9",
+    "amazon-cognito-identity-js": "^3.0.12",
+    "aws-amplify": "^1.1.28",
+    "aws-amplify-vue": "^0.2.11",
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
     "fusioncharts": "^3.13.4",
