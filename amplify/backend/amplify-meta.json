@@ -32,5 +32,31 @@
 			"lastPushDirHash": "RtD4G3QPbFK+19xQNIgqmoKQKYQ="
 		}
 	},
-	"analytics": {}
+	"analytics": {},
+	"storage": {
+		"SharrStorageRes": {
+			"service": "DynamoDB",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"function": {
+		"SharrFuncRes": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [
+				{
+					"category": "storage",
+					"resourceName": "SharrStorageRes",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			],
+			"lastBuildTimeStamp": "2019-05-20T23:14:35.200Z",
+			"lastPackageTimeStamp": "2019-05-20T23:14:39.579Z",
+			"distZipFilename": "SharrFuncRes-1558394075-latest-build.zip"
+		}
+	}
 }
