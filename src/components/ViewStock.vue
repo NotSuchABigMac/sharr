@@ -156,12 +156,12 @@ methods: {
     },
 },
 mounted: function() {
-    this.setChartData('SNAP');
+    this.setChartData('ABT');
 },
 watch: {
     tempVar: {
         handler: function() {
-            this.setChartData('SNAP');
+            this.setChartData('ABT');
         },
         deep: true
     },
