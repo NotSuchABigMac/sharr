@@ -12,11 +12,13 @@ import VueFusionCharts from 'vue-fusioncharts';
 import Amplify, * as AmplifyModules from 'aws-amplify'
 import { AmplifyPlugin } from 'aws-amplify-vue'
 import awsmobile from './aws-exports'
+import Auth from '@aws-amplify/auth';
 import VueRouter from 'vue-router';
 import {routes} from './router';
 import './css/style.css';
 
-Amplify.configure(awsmobile)
+Amplify.configure(awsmobile);
+Auth.configure(awsmobile);
 
 Charts(FusionCharts);
 PowerCharts(FusionCharts);
