@@ -24,7 +24,6 @@
     import { components } from 'aws-amplify-vue';
     import { AmplifyEventBus } from 'aws-amplify-vue';
 
-
     export default {
         name: 'app',
         props: [],
