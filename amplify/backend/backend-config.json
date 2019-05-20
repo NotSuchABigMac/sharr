@@ -1,9 +1,4 @@
 {
 	"auth": {},
-	"analytics": {
-		"sharr": {
-			"service": "Pinpoint",
-			"providerPlugin": "awscloudformation"
-		}
-	}
+	"analytics": {}
 }

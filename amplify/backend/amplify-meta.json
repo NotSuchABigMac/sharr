@@ -12,21 +12,5 @@
 		}
 	},
 	"auth": {},
-	"analytics": {
-		"sharr": {
-			"service": "Pinpoint",
-			"providerPlugin": "awscloudformation",
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
-				"logicalId": "analyticssharr"
-			},
-			"lastPushTimeStamp": "2019-04-19T21:06:08.345Z",
-			"output": {
-				"appName": "sharr-sharrenv",
-				"Region": "us-west-2",
-				"Id": "321823b4d75c47d785b0874394c561a5"
-			},
-			"lastPushDirHash": "qYXacaGG6Vy3uRuD72PZLMdSyNs="
-		}
-	}
+	"analytics": {}
 }
