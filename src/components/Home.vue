@@ -13,6 +13,7 @@
 
 <script>
   console.log("https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/search-all/");
+
   var searchData ={
     "count": "505",
     "items":
@@ -2039,21 +2040,12 @@
               "sector": "Financials"
             }]
   };
-  /*
-  var jsonify = res => res.json();
-  var searchFetch = fetch(
-          "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/search-all/"
-  ).then(jsonify);
-  Promise.all([searchFetch]).then(res => {
-    const searchData = res[0];
-    console.log("hk " + searchData.count);
-  });
-  */
 
   var userInput = " Inc.";
   var closest = [];
   var i, x = 0;
   for (i in searchData.items) {
+    //fetchAsyncERROR(i, searchData.items[i].symbol);
     if(levenshteinDistance(userInput,searchData.items[i].symbol) < 2){
       console.log("i: " + i + " " +searchData.items[i].symbol)
       closest.push(searchData.items[i].symbol)
@@ -2069,6 +2061,7 @@
   props: ["Home"],
   components: {},
   methods: {
+
     mounted: function () {
       this.setChartData();
     },
@@ -2083,8 +2076,24 @@
   },
 };
 
+  /*async function fetchAsyncERROR (i, sym) {
+    var url = "https://cloud.iexapis.com/stable/stock/" + sym + "/quote?token=pk_99a45931973440d789d8fd9bc046c2ef";
+    try {
+      let data = await (await fetch(url)).json();
+      console.log("i: " + i + " ,symbol: "  + data.symbol);
+    }
+    catch(err) {
+      console.log(err + "Error i: " + i + " ,symbol: "  + sym);
+    }
+
+  }*/
 
 
+  async function fetchAsync () {
+      var url = "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/search-all/";
+      let data = await (await fetch(url)).json();
+      return data;
+    }
   /*
   Copyright (c) 2011 Andrei Mackenzie
   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -2126,5 +2135,5 @@
     }
 
     return matrix[b.length][a.length];
-  };
+  }
 </script>
