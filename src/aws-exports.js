@@ -6,7 +6,14 @@ const awsmobile = {
     "aws_cognito_region": "ap-southeast-2",
     "aws_user_pools_id": "ap-southeast-2_46PvLC9tZ",
     "aws_user_pools_web_client_id": "4valinv83h4ifa2grri6ffeqct",
-    "oauth": {}
+    "oauth": {},
+    "aws_dynamodb_all_tables_region": "ap-southeast-2",
+    "aws_dynamodb_table_schemas": [
+        {
+            "tableName": "Txns-sharrenv",
+            "region": "ap-southeast-2"
+        }
+    ]
 };
 
 

@@ -18,11 +18,12 @@
 <script>
 import Amplify, { Auth } from "aws-amplify";
 import { AmplifyEventBus } from 'aws-amplify-vue';
+import store from '../store';
 
 export default {
   data() {
     return {
-      signedIn: false
+      
     }
   },
   props: ["Home"],
@@ -33,9 +34,15 @@ export default {
       if(info === 'signedIn') {
         this.isUserSignedIn();
       } else {
-        this.signedIn = false;
+        this.$store.state.signedIn = false;
+        this.$store.state.user = null;
       }
     });
+  },
+  computed: {
+    signedIn() {
+      return this.$store.state.signedIn;
+    }
   },
   methods: {
     setChartData: function() {
@@ -45,11 +52,13 @@ export default {
       try {
         const userObj = await Auth.currentAuthenticatedUser();
         // If it gets to here, then the user is signed in
-        this.signedIn = true;
+        this.$store.state.signedIn = true;
+        this.$store.state.user = userObj;
         console.log(userObj);
       } catch(err) {
-        this.signedIn = false;
         console.log(err);
+        this.$store.state.signedIn = false;
+        this.$store.state.user = null;
       }
     }
   },

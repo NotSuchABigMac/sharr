@@ -3,6 +3,7 @@ import Home from './components/Home.vue'
 import ViewStock from './components/ViewStock.vue'
 import PurchaseStock from './components/PurchaseStock.vue'
 import PurchaseStockSell from './components/PurchaseStockSell.vue'
+import Portfolio from './components/Portfolio.vue'
 
 export const routes=[
     {
@@ -19,5 +20,8 @@ export const routes=[
     },
     {
       path:'/PurchaseStockSell',component: PurchaseStockSell
+    },
+    {
+      path:'/Portfolio',component: Portfolio
     }
 ]
