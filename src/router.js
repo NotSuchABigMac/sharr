@@ -5,7 +5,7 @@ import PurchaseStock from './components/PurchaseStock.vue'
 import PurchaseStockSell from './components/PurchaseStockSell.vue'
 import Portfolio from './components/Portfolio.vue'
 
-export const routes=[
+export const routes = [
     {
       path: '/' , 
       component: Home
@@ -28,6 +28,10 @@ export const routes=[
     },
     {
       path:'/Portfolio',
-      component: Portfolio
+      name: 'portfolio',
+      component: Portfolio,
+      meta: {
+        requiresAuth: true
+      }
     }
 ]
