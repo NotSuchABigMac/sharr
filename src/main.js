@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
+import store from './store';
 import FusionCharts from 'fusioncharts';
 import Charts from 'fusioncharts/fusioncharts.charts';
 import Widgets from 'fusioncharts/fusioncharts.widgets';
@@ -12,11 +13,13 @@ import VueFusionCharts from 'vue-fusioncharts';
 import Amplify, * as AmplifyModules from 'aws-amplify'
 import { AmplifyPlugin } from 'aws-amplify-vue'
 import awsmobile from './aws-exports'
+import Auth from '@aws-amplify/auth';
 import VueRouter from 'vue-router';
 import {routes} from './router';
 import './css/style.css';
 
-Amplify.configure(awsmobile)
+Amplify.configure(awsmobile);
+Auth.configure(awsmobile);
 
 Charts(FusionCharts);
 PowerCharts(FusionCharts);
@@ -28,13 +31,14 @@ CandyTheme(FusionCharts);
 
 Vue.use(VueFusionCharts, FusionCharts);
 Vue.use(AmplifyPlugin, AmplifyModules);
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 let router = new VueRouter({mode: 'history', routes});
 
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App),
   components: {
     'app-home' : App
