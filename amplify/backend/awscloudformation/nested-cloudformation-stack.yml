@@ -145,6 +145,41 @@
 					"env": "sharrenv"
 				}
 			}
+		},
+		"storageSharrStorageRes": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/storage/SharrStorageRes-cloudformation-template.json",
+				"Parameters": {
+					"tableName": "Txns",
+					"partitionKeyName": "txnId",
+					"partitionKeyType": "S",
+					"sortKeyName": "userId",
+					"sortKeyType": "S",
+					"env": "sharrenv"
+				}
+			}
+		},
+		"functionSharrFuncRes": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/function/SharrFuncRes-cloudformation-template.json",
+				"Parameters": {
+					"storageSharrStorageResName": {
+						"Fn::GetAtt": [
+							"storageSharrStorageRes",
+							"Outputs.Name"
+						]
+					},
+					"storageSharrStorageResArn": {
+						"Fn::GetAtt": [
+							"storageSharrStorageRes",
+							"Outputs.Arn"
+						]
+					},
+					"env": "sharrenv"
+				}
+			}
 		}
 	},
 	"Outputs": {
