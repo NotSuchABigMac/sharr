@@ -7,21 +7,27 @@ import Portfolio from './components/Portfolio.vue'
 
 export const routes=[
     {
-      path: '/' , component: Home
+      path: '/' , 
+      component: Home
     },
     {
-     path:'/SearchStock',component: SearchStock
+      path:'/SearchStock',
+      component: SearchStock
     },
     {
-     path:'/ViewStock',component: ViewStock
+      path:'/ViewStock',
+      component: ViewStock
     },
     {
-      path:'/PurchaseStock',component: PurchaseStock
+      path:'/PurchaseStock',
+      component: PurchaseStock
     },
     {
-      path:'/PurchaseStockSell',component: PurchaseStockSell
+      path:'/PurchaseStockSell',
+      component: PurchaseStockSell
     },
     {
-      path:'/Portfolio',component: Portfolio
+      path:'/Portfolio',
+      component: Portfolio
     }
 ]
