@@ -9,8 +9,8 @@
               <input type="text" ref="input" name="searchStock" class=searchStock @keyup.enter="fancysearchSymbol">
         </div>
       </div>
-      <div class=searchresults>
-        <div class=results id=result1>
+      <div ref=srcRes class=searchresults>
+        <div @click="goToStock(1)" class=results id=result1>
           <div class=firstline>
             <div class=stock-name id=stock-name-1>
                 Name
@@ -31,7 +31,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>
         </div>
-        <div class=results id=result2>
+        <div @click="goToStock(2)" class=results id=result2>
           <div class=firstline>
             <div class=stock-name id=stock-name-2>
                 Name
@@ -52,7 +52,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>
         </div>
-        <div class=results id=result3>
+        <div @click="goToStock(3)" class=results id=result3>
           <div class=firstline>
             <div class=stock-name id=stock-name-3>
                 Name
@@ -72,9 +72,8 @@
             <div class=stock-details>
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>
-          </div>
         </div>
-        <div class=results id=result4>
+        <div @click="goToStock(4)" class=results id=result4>
           <div class=firstline>
             <div class=stock-name id=stock-name-4>
                 Name
@@ -95,7 +94,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>
         </div>
-        <div class=results id=result5>
+        <div @click="goToStock(5)" class=results id=result5>
           <div class=firstline>
             <div class=stock-name id=stock-name-5>
                 Name
@@ -116,7 +115,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result6>
+        <div @click="goToStock(6)" class=results id=result6>
           <div class=firstline>
             <div class=stock-name id=stock-name-6>
                 Name
@@ -137,7 +136,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result7>
+        <div @click="goToStock(7)" class=results id=result7>
           <div class=firstline>
             <div class=stock-name id=stock-name-7>
                 Name
@@ -158,7 +157,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result8>
+        <div @click="goToStock(8)" class=results id=result8>
           <div class=firstline>
             <div class=stock-name id=stock-name-8>
                 Name
@@ -179,7 +178,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result9>
+        <div @click="goToStock(9)" class=results id=result9>
           <div class=firstline>
             <div class=stock-name id=stock-name-9>
                 Name
@@ -200,7 +199,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result10>
+        <div @click="goToStock(10)" class=results id=result10>
           <div class=firstline>
             <div class=stock-name id=stock-name-10>
                 Name
@@ -221,7 +220,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result11>
+        <div @click="goToStock(11)" class=results id=result11>
           <div class=firstline>
             <div class=stock-name id=stock-name-11>
                 Name
@@ -242,7 +241,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result12>
+        <div @click="goToStock(12)" class=results id=result12>
           <div class=firstline>
             <div class=stock-name id=stock-name-12>
                 Name
@@ -263,7 +262,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result13>
+        <div @click="goToStock(13)" class=results id=result13>
           <div class=firstline>
             <div class=stock-name id=stock-name-13>
                 Name
@@ -284,7 +283,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result14>
+        <div @click="goToStock(14)" class=results id=result14>
           <div class=firstline>
             <div class=stock-name id=stock-name-14>
                 Name
@@ -305,7 +304,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result15>
+        <div @click="goToStock(15)" class=results id=result15>
           <div class=firstline>
             <div class=stock-name id=stock-name-15>
                 Name
@@ -326,7 +325,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result16>
+        <div @click="goToStock(16)" class=results id=result16>
           <div class=firstline>
             <div class=stock-name id=stock-name-16>
                 Name
@@ -347,7 +346,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result17>
+        <div @click="goToStock(17)" class=results id=result17>
           <div class=firstline>
             <div class=stock-name id=stock-name-17>
                 Name
@@ -368,7 +367,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result18>
+        <div @click="goToStock(18)" class=results id=result18>
           <div class=firstline>
             <div class=stock-name id=stock-name-18>
                 Name
@@ -389,7 +388,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result19>
+        <div @click="goToStock(19)" class=results id=result19>
           <div class=firstline>
             <div class=stock-name id=stock-name-19>
                 Name
@@ -410,7 +409,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result20>
+        <div @click="goToStock(20)" class=results id=result20>
           <div class=firstline>
             <div class=stock-name id=stock-name-20>
                 Name
@@ -431,7 +430,7 @@
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>      
         </div>
-        <div class=results id=result21>
+        <div @click="goToStock(21)" class=results id=result21>
           <div class=firstline>
             <div class=stock-name id=stock-name-21>
                 Name
@@ -454,40 +453,52 @@
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
+import { isUndefined } from 'util';
 export default {
   props: ["StockGraph"],
   components: {},
   methods: {
+    goToStock(resultNumber) {
+      console.log(this.$refs);
+      var resultchildNode = resultNumber - 1;
+      console.log(this.$refs.srcRes.childNodes[resultchildNode].firstElementChild.nextElementSibling.innerHTML);
+      var stock = this.$refs.srcRes.childNodes[resultchildNode].firstElementChild.nextElementSibling.innerHTML;
+      console.log("TSETESTSETESTESTSETETST");
+      setTimeout(this.checkVariable(stock), 1000);
+      /*this.$router.push({path:'/ViewStock/'+ stock})*/
+    },
+    checkVariable(stock,resultchildNode) {
+      console.log("Checking variable: " + this.$refs.srcRes.childNodes[resultchildNode])
+      if (typeof this.$refs.srcRes.childNodes[resultchildNode] !== 'undefined')
+        console.log(stock)
+        this.$router.push({path:'/ViewStock/'+ stock})
+    },
+
+
     searchSymbol: async function() {
       var symbol = this.$refs.input.value;
       var jsonify = res => res.json();
-      // eslint-disable-next-line
       console.log("https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/search/" + symbol);
       var searchFetch = fetch(
           "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/search/" + symbol).then(jsonify);
       var priceFetch = fetch("https://cloud.iexapis.com/stable/stock/" + symbol + "/quote?token=pk_497251cf3fda45cc93195a67cd10d337").then(jsonify);
-      // eslint-disable-next-line
       console.log("test")
-      // eslint-disable-next-line
       console.log(searchFetch)
-      // eslint-disable-next-line
       console.log(priceFetch)
 
       searchFetch.then(searchResults => {
-        // eslint-disable-next-line
         console.log(searchResults.results[0].name)
         document.getElementById("stock-name-1").innerHTML = searchResults.results[0].name
         document.getElementById("stock-symbol-1").innerHTML = searchResults.results[0].symbol
-        document.getElementById("result1").style.visibility = "visible";
+        document.getElementById("result1").style.display = "block";
       })
 
       priceFetch.then(priceResults => {
-        // eslint-disable-next-line
         console.log(priceResults)
-        // eslint-disable-next-line
         console.log(priceResults.latestPrice)
         document.getElementById("stock-price-1").innerHTML = priceResults.latestPrice
         document.getElementById("stock-change-1").innerHTML = priceResults.change
@@ -498,22 +509,19 @@ export default {
         }
 
       })
-      // eslint-disable-next-line
       console.log("test")
   },
   fancysearchSymbol: async function() {
     var j;
     var jsonify = res => res.json();
     for (j=0;j < 5; j++) {
-      document.getElementById("result" + Number(Number(j)+1)).style.visibility = "hidden";
+      document.getElementById("result" + Number(Number(j)+1)).style.display = "none";
       document.getElementById("stock-name-" + Number(Number(j)+1)).innerHTML = "-";
       document.getElementById("stock-symbol-" + Number(Number(j)+1)).innerHTML = "-";
       document.getElementById("stock-price-" + Number(Number(j)+1)).innerHTML = "-";
       document.getElementById("stock-change-" + Number(Number(j)+1)).innerHTML = "-";
       document.getElementById("result" + Number(Number(j)+1)).style.color = "black";
     }
-    
-    // eslint-disable-next-line
     console.log("https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/search-all/");
     var searchData ={
       "count": "505",
@@ -2547,14 +2555,12 @@ export default {
     var i = 0;
     for (i in searchData.items) {
       if(levenshteinDistance(userInput,searchData.items[i].symbol) < 2){
-        // eslint-disable-next-line
         console.log("i: " + i + " " +searchData.items[i].symbol)
         closest.push({
           symbol: searchData.items[i].symbol, 
           name: searchData.items[i].name,
           sector: searchData.items[i].sector})
       } else if(levenshteinDistance(userInput,searchData.items[i].name) < 5){
-        // eslint-disable-next-line
         console.log("i: " + i + " " + searchData.items[i].name)
         closest.push({
           symbol: searchData.items[i].symbol, 
@@ -2562,28 +2568,22 @@ export default {
           sector: searchData.items[i].sector})
       }
     }
-    // eslint-disable-next-line
     console.log("Matches Found " + closest.length);
-    // eslint-disable-next-line
     console.log(closest)
     j = 0;
     for (j in closest) {
-        // eslint-disable-next-line
         console.log(j + " starting")
-        // eslint-disable-next-line
         document.getElementById("stock-name-" + Number(Number(j)+1)).innerHTML = closest[j].name
         document.getElementById("stock-symbol-" + Number(Number(j)+1)).innerHTML = closest[j].symbol
-        document.getElementById("result" + Number(Number(j)+1)).style.visibility = "visible";
-        // eslint-disable-next-line
+        document.getElementById("result" + Number(Number(j)+1)).style.display = "block";
+        document.getElementById("result" + Number(Number(j)+1)).setAttribute('v-on:click', "goToStock(" + closest[j].symbol + ")");
         console.log(j + " done")
     }
     j = 0;
 
     for (j in closest) {
       var priceFetch = fetch("https://cloud.iexapis.com/stable/stock/" + closest[j].symbol + "/quote?token=pk_497251cf3fda45cc93195a67cd10d337").then(jsonify);
-      // eslint-disable-next-line
       console.log(j + "starting (price)")
-      // eslint-disable-next-line
       console.log("stock-name-" + Number(Number(j)+1))
       console.log(closest[j].symbol)
       console.log("https://cloud.iexapis.com/stable/stock/" + closest[j].symbol + "/quote?token=pk_497251cf3fda45cc93195a67cd10d337")
@@ -2607,7 +2607,6 @@ function priceSetter(j,priceFetch){
         } else {
           document.getElementById("stock-change-" + Number(Number(j)+1)).style.color = "green";
         }
-        // eslint-disable-next-line
         
       })
 } 
