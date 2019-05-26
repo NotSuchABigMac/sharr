@@ -15,6 +15,10 @@ export const routes = [
       component: SearchStock
     },
     {
+      path:'/ViewStock/:stock',
+      component: ViewStock
+    },
+    {
       path:'/ViewStock',
       component: ViewStock
     },
