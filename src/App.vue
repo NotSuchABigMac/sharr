@@ -21,7 +21,9 @@
 </template>
 
 <script>
+    // eslint-disable-next-line
     import { components } from 'aws-amplify-vue';
+    // eslint-disable-next-line
     import { AmplifyEventBus } from 'aws-amplify-vue';
 
     export default {

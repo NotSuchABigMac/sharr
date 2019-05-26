@@ -1,17 +1,7 @@
 <template>
-  <div class="homepage">
-    <div class="auth">
-      <amplify-authenticator></amplify-authenticator>
-      <amplify-sign-out v-if="signedIn"></amplify-sign-out>
-    </div>
-    <br>
-    sharr
-    <br>
-    a new stock market
-    <br>
-    simulation experience...
-    <br>
-    <div>like no other</div>
+  <div class="homepage">         
+                    <div><router-link to="/"> Home </router-link></div>
+                    <div><router-link to="/SearchStock"> Search Stock </router-link></div>
   </div>
 </template>
 

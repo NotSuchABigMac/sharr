@@ -3,7 +3,7 @@
     <div class="card-body pt-0">
       <div id=searchnavbar>
         <div class=backicon>
-          <img src="../assets/backbutton.png"/>
+          <router-link to="/"><img src="../assets/backbutton.png"/></router-link>
         </div>
         <div class=SearchBox>
               <input type="text" ref="input" name="searchStock" class=searchStock @keyup.enter="fancysearchSymbol">
@@ -72,7 +72,7 @@
             <div class=stock-details>
                 23 Apr, 8:46 am GMT-4 - Disclaimer
             </div>
-        </div>
+          </div>
         </div>
         <div class=results id=result4>
           <div class=firstline>
@@ -109,6 +109,342 @@
                     -
                 </div>
                 <div class=stock-change id=stock-change-5>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result6>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-6>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-6>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-6>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-6>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result7>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-7>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-7>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-7>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-7>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result8>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-8>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-8>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-8>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-8>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result9>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-9>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-9>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-9>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-9>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result10>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-10>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-10>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-10>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-10>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result11>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-11>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-11>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-11>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-11>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result12>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-12>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-12>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-12>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-12>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result13>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-13>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-13>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-13>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-13>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result14>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-14>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-14>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-14>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-14>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result15>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-15>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-15>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-15>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-15>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result16>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-16>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-16>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-16>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-16>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result17>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-17>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-17>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-17>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-17>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result18>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-18>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-18>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-18>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-18>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result19>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-19>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-19>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-19>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-19>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result20>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-20>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-20>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-20>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-20>
+                    -
+                </div>
+            </div>
+            <div class=stock-details>
+                23 Apr, 8:46 am GMT-4 - Disclaimer
+            </div>      
+        </div>
+        <div class=results id=result21>
+          <div class=firstline>
+            <div class=stock-name id=stock-name-21>
+                Name
+            </div>
+          </div>
+            <div class=stock-code id=stock-symbol-21>
+              -
+            </div>
+            <div class=third-line>
+                <div class=stock-price id=stock-price-21>
+                    -
+                </div>
+                <div class=stock-change id=stock-change-21>
                     -
                 </div>
             </div>
@@ -167,8 +503,14 @@ export default {
   },
   fancysearchSymbol: async function() {
     var j;
+    var jsonify = res => res.json();
     for (j=0;j < 5; j++) {
       document.getElementById("result" + Number(Number(j)+1)).style.visibility = "hidden";
+      document.getElementById("stock-name-" + Number(Number(j)+1)).innerHTML = "-";
+      document.getElementById("stock-symbol-" + Number(Number(j)+1)).innerHTML = "-";
+      document.getElementById("stock-price-" + Number(Number(j)+1)).innerHTML = "-";
+      document.getElementById("stock-change-" + Number(Number(j)+1)).innerHTML = "-";
+      document.getElementById("result" + Number(Number(j)+1)).style.color = "black";
     }
     
     // eslint-disable-next-line
@@ -2227,14 +2569,26 @@ export default {
     j = 0;
     for (j in closest) {
         // eslint-disable-next-line
-        console.log(j + "starting")
+        console.log(j + " starting")
         // eslint-disable-next-line
-        console.log("stock-name-" + Number(Number(j)+1))
         document.getElementById("stock-name-" + Number(Number(j)+1)).innerHTML = closest[j].name
         document.getElementById("stock-symbol-" + Number(Number(j)+1)).innerHTML = closest[j].symbol
         document.getElementById("result" + Number(Number(j)+1)).style.visibility = "visible";
         // eslint-disable-next-line
-        console.log(j + "done")
+        console.log(j + " done")
+    }
+    j = 0;
+
+    for (j in closest) {
+      var priceFetch = fetch("https://cloud.iexapis.com/stable/stock/" + closest[j].symbol + "/quote?token=pk_497251cf3fda45cc93195a67cd10d337").then(jsonify);
+      // eslint-disable-next-line
+      console.log(j + "starting (price)")
+      // eslint-disable-next-line
+      console.log("stock-name-" + Number(Number(j)+1))
+      console.log(closest[j].symbol)
+      console.log("https://cloud.iexapis.com/stable/stock/" + closest[j].symbol + "/quote?token=pk_497251cf3fda45cc93195a67cd10d337")
+      priceSetter(j,priceFetch)
+      console.log(j + "done (price)")
     }
 
   }
@@ -2244,6 +2598,19 @@ export default {
 }
 }
 
+function priceSetter(j,priceFetch){
+  priceFetch.then(priceResults => {
+        document.getElementById("stock-price-" + Number(Number(j)+1)).innerHTML = priceResults.latestPrice
+        document.getElementById("stock-change-" + Number(Number(j)+1)).innerHTML = priceResults.change
+        if (String(priceResults.change).startsWith("-")) {
+          document.getElementById("stock-change-" + Number(Number(j)+1)).style.color = "red";
+        } else {
+          document.getElementById("stock-change-" + Number(Number(j)+1)).style.color = "green";
+        }
+        // eslint-disable-next-line
+        
+      })
+} 
   /*
   Copyright (c) 2011 Andrei Mackenzie
   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
