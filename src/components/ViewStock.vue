@@ -68,14 +68,12 @@
 import FusionCharts from "fusioncharts";
 import { async } from 'q';
 import { constants } from 'crypto';
-
 var jsonify = res => res.json();
 var dataFetch = fetch(
     "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/prices/GOOG").then(jsonify);
 var schemaFetch = fetch(
     "https://s3.eu-central-1.amazonaws.com/fusion.store/ft/schema/candlestick-chart-schema.json"
 ).then(jsonify);
-
 export default {
 props: ["StockGraph"],
 components: {},
@@ -157,7 +155,15 @@ methods: {
     },
 },
 mounted: function() {
-    this.setChartData('ABT');
+    console.log(this.$route.params.stock)
+    console.log('the stock is: ' + this.$route.params.stock);
+    var testStock = this.$route.params.stock;
+    if (testStock != undefined) {
+        this.setChartData(testStock);
+    } else {
+        this.setChartData('ABT')
+    }
+    
 },
 watch: {
     tempVar: {
