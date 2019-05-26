@@ -3,10 +3,10 @@
         <div class="card-body pt-0">
             <div class=mobile-navbar>
                 <div class=backicon>
-                    <img src="../assets/backbutton.png"/>
+                    <router-link to="/SearchStock"><img src="../assets/backbutton.png"/></router-link>
                 </div>
                 <div class=textbox>
-                    Apple
+                    {{stock}}
                 </div>
             </div>
             <br>
@@ -81,6 +81,7 @@ props: ["StockGraph"],
 components: {},
 data: function() {
 return {
+    stock: this.$route.params.stock,
     width: "100%",
     height: "600",
     type: "timeseries",

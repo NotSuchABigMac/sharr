@@ -12,7 +12,7 @@ export const routes=[
      path:'/SearchStock',component: SearchStock
     },
     {
-     path:'/ViewStock',component: ViewStock
+     path:'/ViewStock/:stock',component: ViewStock
     },
     {
       path:'/PurchaseStock',component: PurchaseStock
