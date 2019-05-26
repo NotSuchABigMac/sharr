@@ -10,7 +10,7 @@
                     <li><router-link to="/"> Home </router-link></li>
                     <li><router-link to="/SearchStock"> Search Stock </router-link></li>
                     <li><router-link to="/ViewStock"> View Stock </router-link></li>
-                    <li><router-link to="/Null"> Null </router-link></li>
+                    <li><router-link to="/Portfolio"> Portfolio </router-link></li>
                 </ul>
                 </div>
                 </div>
@@ -25,7 +25,6 @@
     import { components } from 'aws-amplify-vue';
     // eslint-disable-next-line
     import { AmplifyEventBus } from 'aws-amplify-vue';
-
 
     export default {
         name: 'app',
