@@ -494,7 +494,7 @@ export default {
         console.log(searchResults.results[0].name)
         document.getElementById("stock-name-1").innerHTML = searchResults.results[0].name
         document.getElementById("stock-symbol-1").innerHTML = searchResults.results[0].symbol
-        document.getElementById("result1").style.visibility = "visible";
+        document.getElementById("result1").style.display = "block";
       })
 
       priceFetch.then(priceResults => {
@@ -515,7 +515,7 @@ export default {
     var j;
     var jsonify = res => res.json();
     for (j=0;j < 5; j++) {
-      document.getElementById("result" + Number(Number(j)+1)).style.visibility = "hidden";
+      document.getElementById("result" + Number(Number(j)+1)).style.display = "none";
       document.getElementById("stock-name-" + Number(Number(j)+1)).innerHTML = "-";
       document.getElementById("stock-symbol-" + Number(Number(j)+1)).innerHTML = "-";
       document.getElementById("stock-price-" + Number(Number(j)+1)).innerHTML = "-";
@@ -2575,7 +2575,7 @@ export default {
         console.log(j + " starting")
         document.getElementById("stock-name-" + Number(Number(j)+1)).innerHTML = closest[j].name
         document.getElementById("stock-symbol-" + Number(Number(j)+1)).innerHTML = closest[j].symbol
-        document.getElementById("result" + Number(Number(j)+1)).style.visibility = "visible";
+        document.getElementById("result" + Number(Number(j)+1)).style.display = "block";
         document.getElementById("result" + Number(Number(j)+1)).setAttribute('v-on:click', "goToStock(" + closest[j].symbol + ")");
         console.log(j + " done")
     }
