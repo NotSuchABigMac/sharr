@@ -54,35 +54,5 @@
 			"lastPushDirHash": "HCWslv0F6qsf4sWeU9xwNsQHFa8="
 		}
 	},
-	"function": {
-		"SharrFuncRes": {
-			"service": "Lambda",
-			"providerPlugin": "awscloudformation",
-			"build": true,
-			"dependsOn": [
-				{
-					"category": "storage",
-					"resourceName": "SharrStorageRes",
-					"attributes": [
-						"Name",
-						"Arn"
-					]
-				}
-			],
-			"lastBuildTimeStamp": "2019-05-20T23:14:35.200Z",
-			"lastPackageTimeStamp": "2019-05-20T23:14:39.579Z",
-			"distZipFilename": "SharrFuncRes-1558394075-latest-build.zip",
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/function/SharrFuncRes-cloudformation-template.json",
-				"logicalId": "functionSharrFuncRes"
-			},
-			"lastPushTimeStamp": "2019-05-21T00:12:43.084Z",
-			"output": {
-				"Region": "ap-southeast-2",
-				"Arn": "arn:aws:lambda:ap-southeast-2:279180263681:function:SharrOrder-sharrenv",
-				"Name": "SharrOrder-sharrenv"
-			},
-			"lastPushDirHash": "x1NZpcBAydmMLj25F7H3KPf1gf8="
-		}
-	}
+	"function": {}
 }
