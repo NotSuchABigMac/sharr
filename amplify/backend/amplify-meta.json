@@ -1,88 +1,58 @@
 {
-	"providers": {
-		"awscloudformation": {
-			"AuthRoleName": "sharr-20190420070120-authRole",
-			"UnauthRoleArn": "arn:aws:iam::279180263681:role/sharr-20190420070120-unauthRole",
-			"AuthRoleArn": "arn:aws:iam::279180263681:role/sharr-20190420070120-authRole",
-			"Region": "ap-southeast-2",
-			"DeploymentBucketName": "sharr-20190420070120-deployment",
-			"UnauthRoleName": "sharr-20190420070120-unauthRole",
-			"StackName": "sharr-20190420070120",
-			"StackId": "arn:aws:cloudformation:ap-southeast-2:279180263681:stack/sharr-20190420070120/48783b70-62e6-11e9-93cd-0a843035a916"
-		}
-	},
-	"auth": {
-		"SharrAuth": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/auth/SharrAuth-cloudformation-template.yml",
-				"logicalId": "authSharrAuth"
-			},
-			"lastPushTimeStamp": "2019-05-21T00:12:43.080Z",
-			"output": {
-				"AppClientSecret": "1flp0l96iutju3ko79f6lnhinsl7bahu9sgksgl15kg4mhfkr662",
-				"UserPoolId": "ap-southeast-2_46PvLC9tZ",
-				"AppClientIDWeb": "4valinv83h4ifa2grri6ffeqct",
-				"AppClientID": "4ihjmkidae1c9uab80tu08s4ls",
-				"IdentityPoolId": "ap-southeast-2:cb6d8253-7b75-42a3-91b3-04a0f9908cea",
-				"IdentityPoolName": "SharrIDPool__sharrenv",
-				"UserPoolName": "SharrUserPool"
-			},
-			"lastPushDirHash": "RtD4G3QPbFK+19xQNIgqmoKQKYQ="
-		}
-	},
-	"analytics": {},
-	"storage": {
-		"SharrStorageRes": {
-			"service": "DynamoDB",
-			"providerPlugin": "awscloudformation",
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/storage/SharrStorageRes-cloudformation-template.json",
-				"logicalId": "storageSharrStorageRes"
-			},
-			"lastPushTimeStamp": "2019-05-21T00:12:43.084Z",
-			"output": {
-				"PartitionKeyName": "txnId",
-				"SortKeyName": "userId",
-				"SortKeyType": "S",
-				"Region": "ap-southeast-2",
-				"Arn": "arn:aws:dynamodb:ap-southeast-2:279180263681:table/Txns-sharrenv",
-				"PartitionKeyType": "S",
-				"Name": "Txns-sharrenv"
-			},
-			"lastPushDirHash": "HCWslv0F6qsf4sWeU9xwNsQHFa8="
-		}
-	},
-	"function": {
-		"SharrFuncRes": {
-			"service": "Lambda",
-			"providerPlugin": "awscloudformation",
-			"build": true,
-			"dependsOn": [
-				{
-					"category": "storage",
-					"resourceName": "SharrStorageRes",
-					"attributes": [
-						"Name",
-						"Arn"
-					]
-				}
-			],
-			"lastBuildTimeStamp": "2019-05-20T23:14:35.200Z",
-			"lastPackageTimeStamp": "2019-05-20T23:14:39.579Z",
-			"distZipFilename": "SharrFuncRes-1558394075-latest-build.zip",
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/function/SharrFuncRes-cloudformation-template.json",
-				"logicalId": "functionSharrFuncRes"
-			},
-			"lastPushTimeStamp": "2019-05-21T00:12:43.084Z",
-			"output": {
-				"Region": "ap-southeast-2",
-				"Arn": "arn:aws:lambda:ap-southeast-2:279180263681:function:SharrOrder-sharrenv",
-				"Name": "SharrOrder-sharrenv"
-			},
-			"lastPushDirHash": "x1NZpcBAydmMLj25F7H3KPf1gf8="
-		}
-	}
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "sharr-20190420070120-authRole",
+            "UnauthRoleArn": "arn:aws:iam::279180263681:role/sharr-20190420070120-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::279180263681:role/sharr-20190420070120-authRole",
+            "Region": "ap-southeast-2",
+            "DeploymentBucketName": "sharr-20190420070120-deployment",
+            "UnauthRoleName": "sharr-20190420070120-unauthRole",
+            "StackName": "sharr-20190420070120",
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:279180263681:stack/sharr-20190420070120/48783b70-62e6-11e9-93cd-0a843035a916"
+        }
+    },
+    "auth": {
+        "SharrAuth": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/auth/SharrAuth-cloudformation-template.yml",
+                "logicalId": "authSharrAuth"
+            },
+            "lastPushTimeStamp": "2019-05-24T22:51:27.821Z",
+            "output": {
+                "AppClientSecret": "1flp0l96iutju3ko79f6lnhinsl7bahu9sgksgl15kg4mhfkr662",
+                "UserPoolId": "ap-southeast-2_46PvLC9tZ",
+                "AppClientIDWeb": "4valinv83h4ifa2grri6ffeqct",
+                "AppClientID": "4ihjmkidae1c9uab80tu08s4ls",
+                "IdentityPoolId": "ap-southeast-2:cb6d8253-7b75-42a3-91b3-04a0f9908cea",
+                "IdentityPoolName": "SharrIDPool__sharrenv",
+                "UserPoolName": "SharrUserPool"
+            },
+            "lastPushDirHash": "RtD4G3QPbFK+19xQNIgqmoKQKYQ="
+        }
+    },
+    "analytics": {},
+    "storage": {
+        "SharrStorageRes": {
+            "service": "DynamoDB",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/storage/SharrStorageRes-cloudformation-template.json",
+                "logicalId": "storageSharrStorageRes"
+            },
+            "lastPushTimeStamp": "2019-05-24T22:51:27.822Z",
+            "output": {
+                "PartitionKeyName": "txnId",
+                "SortKeyName": "userId",
+                "SortKeyType": "S",
+                "Region": "ap-southeast-2",
+                "Arn": "arn:aws:dynamodb:ap-southeast-2:279180263681:table/Txns-sharrenv",
+                "PartitionKeyType": "S",
+                "Name": "Txns-sharrenv"
+            },
+            "lastPushDirHash": "HCWslv0F6qsf4sWeU9xwNsQHFa8="
+        }
+    },
+    "function": {}
 }

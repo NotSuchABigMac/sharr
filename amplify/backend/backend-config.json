@@ -12,21 +12,5 @@
 			"providerPlugin": "awscloudformation"
 		}
 	},
-	"function": {
-		"SharrFuncRes": {
-			"service": "Lambda",
-			"providerPlugin": "awscloudformation",
-			"build": true,
-			"dependsOn": [
-				{
-					"category": "storage",
-					"resourceName": "SharrStorageRes",
-					"attributes": [
-						"Name",
-						"Arn"
-					]
-				}
-			]
-		}
-	}
+	"function": {}
 }

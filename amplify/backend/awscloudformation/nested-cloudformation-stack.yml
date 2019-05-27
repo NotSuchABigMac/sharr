@@ -159,27 +159,6 @@
 					"env": "sharrenv"
 				}
 			}
-		},
-		"functionSharrFuncRes": {
-			"Type": "AWS::CloudFormation::Stack",
-			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/function/SharrFuncRes-cloudformation-template.json",
-				"Parameters": {
-					"storageSharrStorageResName": {
-						"Fn::GetAtt": [
-							"storageSharrStorageRes",
-							"Outputs.Name"
-						]
-					},
-					"storageSharrStorageResArn": {
-						"Fn::GetAtt": [
-							"storageSharrStorageRes",
-							"Outputs.Arn"
-						]
-					},
-					"env": "sharrenv"
-				}
-			}
 		}
 	},
 	"Outputs": {
