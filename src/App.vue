@@ -9,7 +9,6 @@
                 <ul>
                     <li><router-link to="/"> Home </router-link></li>
                     <li><router-link to="/SearchStock"> Search Stock </router-link></li>
-                    <li><router-link to="/ViewStock"> View Stock </router-link></li>
                     <li><router-link to="/Portfolio"> Portfolio </router-link></li>
                 </ul>
                 </div>

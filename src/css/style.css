@@ -486,7 +486,7 @@ body {
     margin-top:400px;
 }
 
-.homepage > div {
+.homepage > .homebuttons {
     width: 200px;
     height: 46px;
     margin: 40px;
@@ -789,6 +789,10 @@ hr {
         width: calc(100% - 350px);
         max-width: calc(100% - 350px);
         flex: auto;
+    }
+    .homepage > .homebuttons {
+        display: none;
+
     }
 }
 
