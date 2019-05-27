@@ -514,13 +514,13 @@ export default {
   fancysearchSymbol: async function() {
     var j;
     var jsonify = res => res.json();
-    for (j=0;j < 5; j++) {
+    for (j=0;j < 21; j++) {
       document.getElementById("result" + Number(Number(j)+1)).style.display = "none";
       document.getElementById("stock-name-" + Number(Number(j)+1)).innerHTML = "-";
       document.getElementById("stock-symbol-" + Number(Number(j)+1)).innerHTML = "-";
       document.getElementById("stock-price-" + Number(Number(j)+1)).innerHTML = "-";
       document.getElementById("stock-change-" + Number(Number(j)+1)).innerHTML = "-";
-      document.getElementById("result" + Number(Number(j)+1)).style.color = "black";
+      document.getElementById("result" + Number(Number(j)+1)).style.color = "#555555";
     }
     console.log("https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/search-all/");
     var searchData ={
