@@ -23,6 +23,7 @@
     "moment-timezone": "^0.5.25",
     "node-fetch": "^2.5.0",
     "npm": "^6.9.0",
+    "request": "^2.88.0",
     "serverless": "^1.43.0",
     "uuid": "^3.3.2",
     "vue": "^2.6.6",
