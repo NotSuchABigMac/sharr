@@ -5,7 +5,9 @@
       </div>
       <div v-if="signedIn">
         <div class="homebuttons" @click="buyOrder">BUY</div>
+        <div class="homebuttons" @click="sellOrder">SELL</div>
         <div class="homebuttons" @click="getBalance">BALANCE</div>
+        <div class="homebuttons" @click="getTxns">TXN</div>
         <amplify-sign-out></amplify-sign-out>
       </div>
       <div class=homebuttons><router-link to="/"> Home </router-link></div>
@@ -46,6 +48,26 @@ export default {
     }
   },
   methods: {
+    getTxns: async function() {
+      let info = await Auth.currentUserInfo();
+      console.log("INFO: ", info);
+      console.log("LOCAL: ", this.$store.state.user);
+
+      const balance = request({
+        url: 'https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/getTxns',
+        method: "GET",
+        headers: {
+          "content-type": "application/json",
+          "Authorization": this.$store.state.user.signInUserSession.idToken.jwtToken
+        },
+        json: true,
+      }, function(err, res, body) {
+        console.log("err: ", err);
+        console.log("res: ", res);
+        console.log("bod: ", body);
+      });
+      console.log(balance);      
+    },
     getBalance: async function() {
       let info = await Auth.currentUserInfo();
       console.log("INFO: ", info);
@@ -88,6 +110,9 @@ export default {
         console.log("res: ", res);
         console.log("bod: ", body);
       });
+    },
+    sellOrder: async function() {
+
     },
     setChartData: function() {
 
