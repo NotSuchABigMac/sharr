@@ -93,8 +93,8 @@ export default {
       console.log("INFO: ", info);
       console.log("LOCAL: ", this.$store.state.user);
       const POST_BODY = {
-        symbol: "MSFT",
-        volume: 2000
+        symbol: "msft",
+        volume: 30
       }
       request({
         url: "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/buyOrder/",
