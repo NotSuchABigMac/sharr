@@ -433,6 +433,44 @@ body {
     background-color: #3C5A99;
 }
 
+#foliotable {
+    width:100%;
+    table-layout: fixed; 
+    margin-top: 30px;
+    align-content: left;
+}
+
+.folioheader {
+    border: solid #000;
+    margin-left:30px;
+    margin-right:30px;
+    border-width: 1px;
+    margin-top:22.5px;
+    margin-bottom:22.5px;
+    font-size:20px;
+    color: #FFF;
+    text-align:left;
+    height:40px;
+    width:40px;
+    background-color: #3C5A99;
+    column-gap: 40px;
+}
+
+.folioresults {
+    border: solid #000;
+    margin-left:30px;
+    margin-right:30px;
+    border-radius: 5px;
+    border-width: 1px;
+    margin-top:22.5px;
+    margin-bottom:22.5px;
+    font-size:20px;
+    color: #000;
+    height:40px;
+    width:100%;
+    display: none;
+}
+
 .results {
     border: solid #000;
     margin-left:30px;
@@ -676,6 +714,11 @@ body {
 
 .temp-max-min {
     margin-top: 40px
+}
+
+td {
+    vertical-align: middle;
+    text-align:left;
 }
 
 #dashboard-content {
