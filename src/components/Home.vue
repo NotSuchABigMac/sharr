@@ -1,5 +1,11 @@
 <template>
   <div class="homepage">         
+      <div v-if="!signedIn">
+        <amplify-authenticator></amplify-authenticator>
+      </div>
+      <div v-if="signedIn">
+        <amplify-sign-out></amplify-sign-out>
+      </div>
       <div class=homebuttons><router-link to="/"> Home </router-link></div>
       <div class=homebuttons><router-link to="/SearchStock"> Search Stock </router-link></div>
   </div>

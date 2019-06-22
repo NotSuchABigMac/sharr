@@ -61,7 +61,7 @@
                     Quantity:
                 </div>
                 <div class=entry>
-                    <input type="text">
+                    <input type="text" id=quantityentry>
                 </div>
             </div>
 
@@ -87,8 +87,7 @@
 
             <div class=review-order>
                 <div class=review-button>
-                    <span class review-button-span>Review Order</span>
-                    
+                    <span class review-button-span @click="buyOrder()">Place Order</span>
                 </div>
             </div>
         </div>
@@ -96,7 +95,10 @@
 </template>
 
     <script>
+        import Amplify, { Auth } from "aws-amplify";
         import FusionCharts from "fusioncharts";
+        import { async } from 'q';
+        var request = require('request');
        /* function printObject(o) {
             var out = '';
             for (var p in o) {
@@ -154,6 +156,30 @@ return {
         };
 },
         methods: {
+            buyOrder: async function() {
+            let info = await Auth.currentUserInfo();
+            console.log("INFO: ", info);
+            console.log("LOCAL: ", this.$store.state.user);
+            const POST_BODY = {
+                symbol: this.$route.params.stock,
+                volume: document.getElementById("quantityentry").value
+            }
+            console.log(POST_BODY)
+            request({
+                url: "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/buyOrder/",
+                method: "POST",
+                headers: {
+                "content-type": "application/json",
+                "Authorization": this.$store.state.user.signInUserSession.idToken.jwtToken
+                },
+                json: true,
+                body: POST_BODY
+            }, function(err, res, body) {
+                console.log("err: ", err);
+                console.log("res: ", res);
+                console.log("bod: ", body);
+            });
+            },
             setChartData: function() {
                 Promise.all([dataFetch, schemaFetch]).then(res => {
                     const data = res[0];
