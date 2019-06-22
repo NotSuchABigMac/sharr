@@ -23,6 +23,10 @@ export const routes = [
       component: ViewStock
     },
     {
+      path:'/PurchaseStock/:stock',
+      component: PurchaseStock
+    },
+    {
       path:'/PurchaseStock',
       component: PurchaseStock
     },

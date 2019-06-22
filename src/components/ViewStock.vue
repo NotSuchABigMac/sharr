@@ -5,9 +5,7 @@
                 <div class=backicon>
                     <router-link to="/SearchStock"><img src="../assets/backbutton.png"/></router-link>
                 </div>
-                <div class=textbox>
-                    {{stock}}
-                </div>
+                <div class=textbox id=stockbox>{{stock}}</div>
             </div>
             <br>
             <!---
@@ -55,11 +53,11 @@
             </div>
             </div>
             <div class=buttons>
-                <div class=buy-button>
-                    Buy
+                <div @click="goToStock" class=buy-button>
+                  Buy
                 </div>
                 <div class=sell-button>
-                    Sell
+                  Sell
                 </div>
             </div>
             <fusioncharts
@@ -125,6 +123,11 @@ return {
 };
 },
 methods: {
+    goToStock() {
+      var stock = document.getElementById("stockbox").innerHTML;
+      console.log(stock)
+      this.$router.push({path:'/PurchaseStock/'+ stock})
+    },
     searchSymbol: async function() {
         var symbol = this.$refs.input.value;
         var jsonify = res => res.json();
