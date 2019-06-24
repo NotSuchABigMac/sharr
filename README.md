@@ -53,3 +53,8 @@ npm run serve
 ```
 npm run build
 ```
+
+### Testing and linting guide
+```
+https://github.com/MinuraIddamalgoda/sharr/blob/master/src/tests/test_doc.md
+```
