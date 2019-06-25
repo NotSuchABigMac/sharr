@@ -1,14 +1,32 @@
 {
 	"auth": {
-		"cognito4295e4da": {
+		"SharrAuth": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation"
 		}
 	},
-	"analytics": {
-		"sharr": {
-			"service": "Pinpoint",
+	"analytics": {},
+	"storage": {
+		"SharrStorageRes": {
+			"service": "DynamoDB",
 			"providerPlugin": "awscloudformation"
+		}
+	},
+	"function": {
+		"SharrFuncRes": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [
+				{
+					"category": "storage",
+					"resourceName": "SharrStorageRes",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			]
 		}
 	}
 }

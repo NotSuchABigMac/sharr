@@ -1,47 +1,58 @@
 {
-	"providers": {
-		"awscloudformation": {
-			"AuthRoleName": "sharr-20190420070120-authRole",
-			"UnauthRoleArn": "arn:aws:iam::279180263681:role/sharr-20190420070120-unauthRole",
-			"AuthRoleArn": "arn:aws:iam::279180263681:role/sharr-20190420070120-authRole",
-			"Region": "ap-southeast-2",
-			"DeploymentBucketName": "sharr-20190420070120-deployment",
-			"UnauthRoleName": "sharr-20190420070120-unauthRole",
-			"StackName": "sharr-20190420070120",
-			"StackId": "arn:aws:cloudformation:ap-southeast-2:279180263681:stack/sharr-20190420070120/48783b70-62e6-11e9-93cd-0a843035a916"
-		}
-	},
-	"auth": {
-		"cognito4295e4da": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/auth/cognito4295e4da-cloudformation-template.yml",
-				"logicalId": "authcognito4295e4da"
-			},
-			"lastPushTimeStamp": "2019-04-19T21:06:08.345Z",
-			"output": {
-				"IdentityPoolId": "ap-southeast-2:b83adcdc-daee-4e16-abbd-36be566b0ea8",
-				"IdentityPoolName": "sharr_identitypool_740a43f6__sharrenv"
-			},
-			"lastPushDirHash": "NsCkOwgLai1q9rQMIf4IajFiw0o="
-		}
-	},
-	"analytics": {
-		"sharr": {
-			"service": "Pinpoint",
-			"providerPlugin": "awscloudformation",
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
-				"logicalId": "analyticssharr"
-			},
-			"lastPushTimeStamp": "2019-04-19T21:06:08.345Z",
-			"output": {
-				"appName": "sharr-sharrenv",
-				"Region": "us-west-2",
-				"Id": "321823b4d75c47d785b0874394c561a5"
-			},
-			"lastPushDirHash": "qYXacaGG6Vy3uRuD72PZLMdSyNs="
-		}
-	}
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "sharr-20190420070120-authRole",
+            "UnauthRoleArn": "arn:aws:iam::279180263681:role/sharr-20190420070120-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::279180263681:role/sharr-20190420070120-authRole",
+            "Region": "ap-southeast-2",
+            "DeploymentBucketName": "sharr-20190420070120-deployment",
+            "UnauthRoleName": "sharr-20190420070120-unauthRole",
+            "StackName": "sharr-20190420070120",
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:279180263681:stack/sharr-20190420070120/48783b70-62e6-11e9-93cd-0a843035a916"
+        }
+    },
+    "auth": {
+        "SharrAuth": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/auth/SharrAuth-cloudformation-template.yml",
+                "logicalId": "authSharrAuth"
+            },
+            "lastPushTimeStamp": "2019-05-24T22:51:27.821Z",
+            "output": {
+                "AppClientSecret": "1flp0l96iutju3ko79f6lnhinsl7bahu9sgksgl15kg4mhfkr662",
+                "UserPoolId": "ap-southeast-2_46PvLC9tZ",
+                "AppClientIDWeb": "4valinv83h4ifa2grri6ffeqct",
+                "AppClientID": "4ihjmkidae1c9uab80tu08s4ls",
+                "IdentityPoolId": "ap-southeast-2:cb6d8253-7b75-42a3-91b3-04a0f9908cea",
+                "IdentityPoolName": "SharrIDPool__sharrenv",
+                "UserPoolName": "SharrUserPool"
+            },
+            "lastPushDirHash": "RtD4G3QPbFK+19xQNIgqmoKQKYQ="
+        }
+    },
+    "analytics": {},
+    "storage": {
+        "SharrStorageRes": {
+            "service": "DynamoDB",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/sharr-20190420070120-deployment/amplify-cfn-templates/storage/SharrStorageRes-cloudformation-template.json",
+                "logicalId": "storageSharrStorageRes"
+            },
+            "lastPushTimeStamp": "2019-05-24T22:51:27.822Z",
+            "output": {
+                "PartitionKeyName": "txnId",
+                "SortKeyName": "userId",
+                "SortKeyType": "S",
+                "Region": "ap-southeast-2",
+                "Arn": "arn:aws:dynamodb:ap-southeast-2:279180263681:table/Txns-sharrenv",
+                "PartitionKeyType": "S",
+                "Name": "Txns-sharrenv"
+            },
+            "lastPushDirHash": "HCWslv0F6qsf4sWeU9xwNsQHFa8="
+        }
+    },
+    "function": {}
 }
