@@ -39,7 +39,7 @@
                     <div @click="goToStockBuy" class=buy-button-sellpage>
                         Buy
                     </div>
-                    <div class=sell-button-sellpage>
+                    <div class=sell-button>
                         Sell
                     </div>
                 </div>

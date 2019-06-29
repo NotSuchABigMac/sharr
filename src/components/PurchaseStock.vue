@@ -36,10 +36,11 @@
                     Order by:
                 </div>
                 <div class=button-container>
-                    <div class=buy-button-buypage>
+                    <div class=buy-button>
                         Buy
                     </div>
                     <div @click="goToStockSell" class=sell-button-buypage>
+
                         Sell
                     </div>
                 </div>
