@@ -67,9 +67,31 @@ export default {
       });
       console.log(balance);      
     },
+    getBalance: async function() {
+      var self = this;
+      let info = await Auth.currentUserInfo();
+      console.log("INFO: ", info);
+      console.log("LOCAL: ", this.$store.state.user);
+      const balance = request({
+        url: 'https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/getBalance',
+        method: "GET",
+        headers: {
+          "content-type": "application/json",
+          "Authorization": this.$store.state.user.signInUserSession.idToken.jwtToken
+        },
+        json: true,
+      }, function(err, res, body) {
+        console.log("err: ", err);
+        console.log("res: ", res);
+        console.log("bod: ", body);
+        self.$parent.setLoggedInUser(self.$store.state.user.attributes.email, body.currentBalance);
+      });
+      
+    }
   },
   mounted() {
       this.getTxns()
+      this.getBalance();
   }
 }
 function setTxns(body) {
@@ -77,7 +99,8 @@ function setTxns(body) {
       for (i in body.data.Items) {
         console.log(body.data.Items[i])
         console.log(body.data.Items[i].symbol)
-        document.getElementById("result" + Number(Number(i)+1)).firstChild.innerHTML = "Buy"
+        var ordertype = body.data.Items[i].type.charAt(0).toUpperCase() + body.data.Items[i].type.slice(1).toLowerCase();
+        document.getElementById("result" + Number(Number(i)+1)).firstChild.innerHTML = ordertype
         document.getElementById("result" + Number(Number(i)+1)).firstChild.nextSibling.innerHTML = body.data.Items[i].symbol
         document.getElementById("result" + Number(Number(i)+1)).firstChild.nextSibling.nextSibling.innerHTML = body.data.Items[i].price
         document.getElementById("result" + Number(Number(i)+1)).firstChild.nextSibling.nextSibling.nextSibling.innerHTML = body.data.Items[i].volume
