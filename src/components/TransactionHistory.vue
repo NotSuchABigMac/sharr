@@ -99,7 +99,8 @@ function setTxns(body) {
       for (i in body.data.Items) {
         console.log(body.data.Items[i])
         console.log(body.data.Items[i].symbol)
-        document.getElementById("result" + Number(Number(i)+1)).firstChild.innerHTML = "Buy"
+        var ordertype = body.data.Items[i].type.charAt(0).toUpperCase() + body.data.Items[i].type.slice(1).toLowerCase();
+        document.getElementById("result" + Number(Number(i)+1)).firstChild.innerHTML = ordertype
         document.getElementById("result" + Number(Number(i)+1)).firstChild.nextSibling.innerHTML = body.data.Items[i].symbol
         document.getElementById("result" + Number(Number(i)+1)).firstChild.nextSibling.nextSibling.innerHTML = body.data.Items[i].price
         document.getElementById("result" + Number(Number(i)+1)).firstChild.nextSibling.nextSibling.nextSibling.innerHTML = body.data.Items[i].volume
