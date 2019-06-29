@@ -53,10 +53,10 @@
             </div>
             </div>
             <div class=buttons>
-                <div @click="goToStock" class=buy-button>
+                <div @click="goToStockBuy" class=buy-button>
                   Buy
                 </div>
-                <div class=sell-button>
+                <div @click="goToStockSell" class=sell-button>
                   Sell
                 </div>
             </div>
@@ -79,7 +79,7 @@ import { async } from 'q';
 import { constants } from 'crypto';
 var jsonify = res => res.json();
 var dataFetch = fetch(
-    "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/prices/GOOG").then(jsonify);
+    "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/prices/GOOG").then(jsonify);
 var schemaFetch = fetch(
     "https://s3.eu-central-1.amazonaws.com/fusion.store/ft/schema/candlestick-chart-schema.json"
 ).then(jsonify);
@@ -123,17 +123,22 @@ return {
 };
 },
 methods: {
-    goToStock() {
+    goToStockBuy() {
       var stock = document.getElementById("stockbox").innerHTML;
       console.log(stock)
       this.$router.push({path:'/PurchaseStock/'+ stock})
     },
+    goToStockSell() {
+      var stock = document.getElementById("stockbox").innerHTML;
+      console.log(stock)
+      this.$router.push({path:'/PurchaseStockSell/'+ stock})
+    },
     searchSymbol: async function() {
         var symbol = this.$refs.input.value;
         var jsonify = res => res.json();
-        console.log("https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/prices/" + symbol);
+        console.log("https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/prices/" + symbol);
         var dataFetch = fetch(
-            "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/prices/" + symbol).then(jsonify);
+            "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/prices/" + symbol).then(jsonify);
         var schemaFetch = fetch(
             "https://s3.eu-central-1.amazonaws.com/fusion.store/ft/schema/candlestick-chart-schema.json"
         ).then(jsonify);
@@ -150,9 +155,9 @@ methods: {
     },
     setChartData: function(symbol) {
         var jsonify = res => res.json();
-        console.log("https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/prices/" + symbol);
+        console.log("https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/prices/" + symbol);
         var dataFetch = fetch(
-            "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/prices/" + symbol).then(jsonify);
+            "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/prices/" + symbol).then(jsonify);
         var schemaFetch = fetch(
             "https://s3.eu-central-1.amazonaws.com/fusion.store/ft/schema/candlestick-chart-schema.json"
         ).then(jsonify);
@@ -2197,7 +2202,7 @@ methods: {
         var closest = [];
         var i = 0;
         for (i in searchData.items) {
-            console.log("comparing:" + searchSymbol + " & " + searchData.items[i].symbol)
+            //console.log("comparing:" + searchSymbol + " & " + searchData.items[i].symbol)
             if (searchSymbol == searchData.items[i].symbol) {
                 closest.push({
                     symbol: searchData.items[i].symbol, 
