@@ -25,10 +25,10 @@
                     Order by:
                 </div>
                 <div class=button-container>
-                    <div class=buy-button-sellpage>
+                    <div class=buy-button>
                         Buy
                     </div>
-                    <div class=sell-button-sellpage>
+                    <div class=sell-button>
                         Sell
                     </div>
                 </div>
