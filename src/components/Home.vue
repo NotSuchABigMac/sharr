@@ -15,6 +15,7 @@
 import Amplify, { Auth } from "aws-amplify";
 import { AmplifyEventBus } from 'aws-amplify-vue';
 import store from '../store';
+
 var request = require('request');
 
 export default {
@@ -44,9 +45,23 @@ export default {
   },
   methods: {
     setChartData: function() {
-      
+
     },
-    async checkUser() {
+    async isUserSignedIn() {
+      try {
+        const userObj = await Auth.currentAuthenticatedUser();
+        // If it gets to here, then the user is signed in
+        this.$store.state.signedIn = true;
+        this.$store.state.user = userObj;
+        console.log(userObj);
+      } catch(err) {
+        console.log(err);
+        this.$store.state.signedIn = false;
+        this.$store.state.user = null;
+      }
+    }
+  },    
+  async checkUser() {
       let info = await Auth.currentUserInfo();
       console.log("INFO: ", info);
       console.log("LOCAL: ", this.$store.state.user);
@@ -64,20 +79,6 @@ export default {
         console.log("bod: ", body);
       });
     },
-    async isUserSignedIn() {
-      try {
-        const userObj = await Auth.currentAuthenticatedUser();
-        // If it gets to here, then the user is signed in
-        this.$store.state.signedIn = true;
-        this.$store.state.user = userObj;
-        console.log(userObj);
-      } catch(err) {
-        console.log(err);
-        this.$store.state.signedIn = false;
-        this.$store.state.user = null;
-      }
-    }
-  },
   mounted: function() {
     this.setChartData();
   },
