@@ -158,6 +158,7 @@ return {
         methods: {
             buyOrder: async function() {
             let info = await Auth.currentUserInfo();
+            var self = this;
             console.log("INFO: ", info);
             console.log("LOCAL: ", this.$store.state.user);
             const POST_BODY = {
@@ -178,10 +179,17 @@ return {
                 console.log("err: ", err);
                 console.log("res: ", res);
                 console.log("bod: ", body);
+                if (res.statusCode == 200) {
+                  self.goToPortfolio();
+                }
+
             });
             },
             goToStockSell() {
               this.$router.push({path:'/PurchaseStockSell/'+ this.$route.params.stock})
+            },
+            goToPortfolio: function() {
+              this.$router.push({path:'/Portfolio/'})
             },
             setChartData: function() {
                 Promise.all([dataFetch, schemaFetch]).then(res => {
