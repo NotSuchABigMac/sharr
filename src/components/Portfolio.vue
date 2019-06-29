@@ -52,7 +52,7 @@ export default {
       console.log("INFO: ", info);
       console.log("LOCAL: ", this.$store.state.user);
       const balance = request({
-        url: 'https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/getTxns',
+        url: 'https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/getTxns',
         method: "GET",
         headers: {
           "content-type": "application/json",
