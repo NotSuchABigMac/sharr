@@ -482,9 +482,9 @@ export default {
     searchSymbol: async function() {
       var symbol = this.$refs.input.value;
       var jsonify = res => res.json();
-      console.log("https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/search/" + symbol);
+      console.log("https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/search/" + symbol);
       var searchFetch = fetch(
-          "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/search/" + symbol).then(jsonify);
+          "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/search/" + symbol).then(jsonify);
       var priceFetch = fetch("https://cloud.iexapis.com/stable/stock/" + symbol + "/quote?token=pk_497251cf3fda45cc93195a67cd10d337").then(jsonify);
       console.log("test")
       console.log(searchFetch)
@@ -522,7 +522,7 @@ export default {
       document.getElementById("stock-change-" + Number(Number(j)+1)).innerHTML = "-";
       document.getElementById("result" + Number(Number(j)+1)).style.color = "#555555";
     }
-    console.log("https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/search-all/");
+    console.log("https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/search-all/");
     var searchData ={
       "count": "505",
       "items":
