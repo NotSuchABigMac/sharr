@@ -832,6 +832,10 @@ hr {
     .mobile-navbar {
         display: none;
     }
+
+    .homebuttons {
+        display: none;
+    }
 }
 
 /* Below will occur only on screens bigger than 1440px */
@@ -846,10 +850,6 @@ hr {
         width: calc(100% - 350px);
         max-width: calc(100% - 350px);
         flex: auto;
-    }
-    .homepage > .homebuttons {
-        display: none;
-
     }
 }
 
