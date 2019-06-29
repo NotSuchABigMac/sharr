@@ -3,15 +3,23 @@
         <div class="container-fluid" id="app">
             <div class="row">
                 <div class="navbar">
-                <img src="./assets/Sharr.png" alt="Sharr Icon" style="width:7.5%;height:7.5%"/>
-                <br>
-                <div>
-                <ul>
-                    <li><router-link to="/"> Home </router-link></li>
-                    <li><router-link to="/SearchStock"> Search Stock </router-link></li>
-                    <li><router-link to="/Portfolio"> Portfolio </router-link></li>
-                </ul>
-                </div>
+                    <img src="./assets/Sharr.png" alt="Sharr Icon" style="width:7.5%;height:7.5%"/>
+                    <br>
+                    <div>
+                        <ul>
+                            <li><router-link to="/"> Home </router-link></li>
+                            <li><router-link to="/SearchStock"> Search Stock </router-link></li>
+                            <li><router-link to="/Portfolio"> Portfolio </router-link></li>
+                            <li><router-link to="/TransactionHistory"> History </router-link></li>
+                        </ul>
+                        <br>
+                    </div>
+                    <div class=logininfobar>
+                        <ul class=logininfo>
+                            <li id=email></li>
+                            <li id=balance></li>
+                        </ul>
+                    </div>
                 </div>
                 <router-view></router-view>
             </div>
@@ -62,6 +70,14 @@
                 }
             };
         },
+        methods: {
+            setLoggedInUser: function(email,balance) {
+                balance = balance.toLocaleString();
+                document.getElementById("email").innerHTML = "User: " + email
+                document.getElementById("balance").innerHTML = "Balance: $"+ balance
+                console.log("email = " + email + "balance = " + balance)
+            }
+        }
     };
 </script>
 <style>

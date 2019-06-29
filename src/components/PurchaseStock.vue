@@ -39,7 +39,8 @@
                     <div class=buy-button>
                         Buy
                     </div>
-                    <div class=sell-button>
+                    <div @click="goToStockSell" class=sell-button-buypage>
+
                         Sell
                     </div>
                 </div>
@@ -158,6 +159,7 @@ return {
         methods: {
             buyOrder: async function() {
             let info = await Auth.currentUserInfo();
+            var self = this;
             console.log("INFO: ", info);
             console.log("LOCAL: ", this.$store.state.user);
             const POST_BODY = {
@@ -166,7 +168,7 @@ return {
             }
             console.log(POST_BODY)
             request({
-                url: "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/buyOrder/",
+                url: "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/buyOrder/",
                 method: "POST",
                 headers: {
                 "content-type": "application/json",
@@ -178,7 +180,17 @@ return {
                 console.log("err: ", err);
                 console.log("res: ", res);
                 console.log("bod: ", body);
+                if (res.statusCode == 200) {
+                  self.goToPortfolio();
+                }
+
             });
+            },
+            goToStockSell() {
+              this.$router.push({path:'/PurchaseStockSell/'+ this.$route.params.stock})
+            },
+            goToPortfolio: function() {
+              this.$router.push({path:'/Portfolio/'})
             },
             setChartData: function() {
                 Promise.all([dataFetch, schemaFetch]).then(res => {
@@ -2249,6 +2261,27 @@ return {
         })
 
         },
+    getBalance: async function() {
+      var self = this;
+      let info = await Auth.currentUserInfo();
+      console.log("INFO: ", info);
+      console.log("LOCAL: ", this.$store.state.user);
+      const balance = request({
+        url: 'https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/getBalance',
+        method: "GET",
+        headers: {
+          "content-type": "application/json",
+          "Authorization": this.$store.state.user.signInUserSession.idToken.jwtToken
+        },
+        json: true,
+      }, function(err, res, body) {
+        console.log("err: ", err);
+        console.log("res: ", res);
+        console.log("bod: ", body);
+        self.$parent.setLoggedInUser(self.$store.state.user.attributes.email, body.currentBalance);
+      });
+      
+    }
         },
         mounted: function() {
         console.log(this.$route.params.stock)
@@ -2259,6 +2292,7 @@ return {
         } else {
             this.setStockPriceBoxData('ABT')
         }
+        this.getBalance();
         },
         watch: {
             tempVar: {
