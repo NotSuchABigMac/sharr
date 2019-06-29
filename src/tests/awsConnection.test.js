@@ -3,7 +3,7 @@ const fetch = require('node-fetch')
 
 describe('Test AWS Connection using Promises', () => {
     it('should return Hello World', () => {
-    const BASE_URL = "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta";
+    const BASE_URL = "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable";
     var jsonify = res => res.json();
     var dataFetch = fetch(
         BASE_URL + "/health-check/connection/")

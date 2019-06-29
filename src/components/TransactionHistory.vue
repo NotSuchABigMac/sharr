@@ -5,7 +5,7 @@
     <div class=backicon>
         <router-link to="/SearchStock"><img src="../assets/backbutton.png"/></router-link>
     </div>
-    <div class=textbox id=stockbox>Portfolio</div>
+    <div class=textbox id=stockbox>Transaction History</div>
     </div>
     <table id=foliotable>
       <tr class=folioheader><th scope="col">Trans. Type</th><th scope="col">Symbol</th><th scope="col">Price</th><th scope="col">Volume</th>
