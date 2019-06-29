@@ -36,10 +36,10 @@
                     Order by:
                 </div>
                 <div class=button-container>
-                    <div class=buy-button-buypage>
+                    <div class=buy-button>
                         Buy
                     </div>
-                    <div class=sell-button-buypage>
+                    <div class=sell-button>
                         Sell
                     </div>
                 </div>
@@ -99,7 +99,6 @@
         import FusionCharts from "fusioncharts";
         import { async } from 'q';
         var request = require('request');
-        var buy
        /* function printObject(o) {
             var out = '';
             for (var p in o) {

@@ -43,19 +43,19 @@ body {
     line-height: 200%;
 }
 
-.order-type-box > .button-container > .buy-button-buypage {
+.order-type-box > .button-container > .buy-button {
     float: left;
     width:106px;
     height: 46px;
     font-size: 30px;
     border-radius:8px;
     border:solid 1px #0DC800;
-    background-color:#0DC800;
-    color: #FFFFFF;
+    background-color:#FFFFFF;
+    color: #0DC800;
     line-height: 150%;
 }
 
-.order-type-box > .button-container > .sell-button-buypage {
+.order-type-box > .button-container > .sell-button {
     float: left;
     width:106px;
     height: 46px;
@@ -63,12 +63,12 @@ body {
     margin-left:8px;
     border-radius:8px;
     border:solid 1px #F56363;
-    background-color:#FFF;
-    color: #F56363;
+    background-color:#F56363;
+    color: #FFFFFF;
     line-height: 150%;
 }
 
-.order-type-box > .button-container > .buy-button-sellpage {
+.order-type-box > .button-container > .buy-button {
     float: left;
     width:106px;
     height: 46px;
@@ -80,7 +80,7 @@ body {
     line-height: 150%;
 }
 
-.order-type-box > .button-container > .sell-button-sellpage {
+.order-type-box > .button-container > .sell-button {
     float: left;
     width:106px;
     height: 46px;
