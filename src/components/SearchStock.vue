@@ -459,6 +459,10 @@
 <script>
 import { isUndefined } from 'util';
 import Amplify, { Auth } from "aws-amplify";
+import { AmplifyEventBus } from 'aws-amplify-vue';
+import store from '../store';
+var request = require('request');
+
 export default {
   props: ["StockGraph"],
   components: {},
