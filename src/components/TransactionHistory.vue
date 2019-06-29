@@ -8,27 +8,27 @@
     <div class=textbox id=stockbox>Transaction History</div>
     </div>
     <table id=foliotable>
-      <tr class=folioheader><th scope="col">Trans. Type</th><th scope="col">Symbol</th><th scope="col">Price</th><th scope="col">Volume</th>
-      <tr class=folioresults id=result1><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result2><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result3><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result4><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result5><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result6><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result7><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result8><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result9><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result10><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result11><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result12><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result13><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result14><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result15><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result16><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result17><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result18><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result19><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
-      <tr class=folioresults id=result20><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioheader><th scope="col">Date/Time</th><th scope="col">Trans. Type</th><th scope="col">Symbol</th><th scope="col">Price</th><th scope="col">Volume</th>
+      <tr class=folioresults id=result1><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result2><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result3><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result4><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result5><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result6><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result7><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result8><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result9><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result10><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result11><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result12><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result13><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result14><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result15><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result16><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result17><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result18><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result19><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
+      <tr class=folioresults id=result20><td class=time></td><td class=type></td><td class=symbol></td><td class=price></td><td class=volume></td></tr>
     </table>
   </div>
 </template>
@@ -100,10 +100,13 @@ function setTxns(body) {
         console.log(body.data.Items[i])
         console.log(body.data.Items[i].symbol)
         var ordertype = body.data.Items[i].type.charAt(0).toUpperCase() + body.data.Items[i].type.slice(1).toLowerCase();
-        document.getElementById("result" + Number(Number(i)+1)).firstChild.innerHTML = ordertype
-        document.getElementById("result" + Number(Number(i)+1)).firstChild.nextSibling.innerHTML = body.data.Items[i].symbol
-        document.getElementById("result" + Number(Number(i)+1)).firstChild.nextSibling.nextSibling.innerHTML = body.data.Items[i].price
-        document.getElementById("result" + Number(Number(i)+1)).firstChild.nextSibling.nextSibling.nextSibling.innerHTML = body.data.Items[i].volume
+        var ordertime = body.data.Items[i].datetime
+        var d = new Date(body.data.Items[i].datetime);
+        document.getElementById("result" + Number(Number(i)+1)).firstChild.innerHTML = d.toLocaleString()
+        document.getElementById("result" + Number(Number(i)+1)).firstChild.nextSibling.innerHTML = ordertype
+        document.getElementById("result" + Number(Number(i)+1)).firstChild.nextSibling.nextSibling.innerHTML = body.data.Items[i].symbol
+        document.getElementById("result" + Number(Number(i)+1)).firstChild.nextSibling.nextSibling.nextSibling.innerHTML = body.data.Items[i].price
+        document.getElementById("result" + Number(Number(i)+1)).firstChild.nextSibling.nextSibling.nextSibling.nextSibling.innerHTML = body.data.Items[i].volume       
         document.getElementById("result" + Number(Number(i)+1)).style.display = "table-row";
     }
     }
