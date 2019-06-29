@@ -2260,6 +2260,27 @@ return {
         })
 
         },
+    getBalance: async function() {
+      var self = this;
+      let info = await Auth.currentUserInfo();
+      console.log("INFO: ", info);
+      console.log("LOCAL: ", this.$store.state.user);
+      const balance = request({
+        url: 'https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/getBalance',
+        method: "GET",
+        headers: {
+          "content-type": "application/json",
+          "Authorization": this.$store.state.user.signInUserSession.idToken.jwtToken
+        },
+        json: true,
+      }, function(err, res, body) {
+        console.log("err: ", err);
+        console.log("res: ", res);
+        console.log("bod: ", body);
+        self.$parent.setLoggedInUser(self.$store.state.user.attributes.email, body.currentBalance);
+      });
+      
+    }
         },
         mounted: function() {
         console.log(this.$route.params.stock)
@@ -2270,6 +2291,7 @@ return {
         } else {
             this.setStockPriceBoxData('ABT')
         }
+        this.getBalance();
         },
         watch: {
             tempVar: {

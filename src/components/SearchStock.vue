@@ -458,9 +458,13 @@
 
 <script>
 import { isUndefined } from 'util';
+import Amplify, { Auth } from "aws-amplify";
 export default {
   props: ["StockGraph"],
   components: {},
+  mounted: function(){
+    this.getBalance();
+  },
   methods: {
     goToStock(resultNumber) {
       console.log(this.$refs);
@@ -477,8 +481,27 @@ export default {
         console.log(stock)
         this.$router.push({path:'/ViewStock/'+ stock})
     },
-
-
+    getBalance: async function() {
+      var self = this;
+      let info = await Auth.currentUserInfo();
+      console.log("INFO: ", info);
+      console.log("LOCAL: ", this.$store.state.user);
+      const balance = request({
+        url: 'https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/getBalance',
+        method: "GET",
+        headers: {
+          "content-type": "application/json",
+          "Authorization": this.$store.state.user.signInUserSession.idToken.jwtToken
+        },
+        json: true,
+      }, function(err, res, body) {
+        console.log("err: ", err);
+        console.log("res: ", res);
+        console.log("bod: ", body);
+        self.$parent.setLoggedInUser(self.$store.state.user.attributes.email, body.currentBalance);
+      });
+      
+    },
     searchSymbol: async function() {
       var symbol = this.$refs.input.value;
       var jsonify = res => res.json();

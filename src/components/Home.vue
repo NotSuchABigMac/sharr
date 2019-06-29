@@ -15,6 +15,9 @@
 import Amplify, { Auth } from "aws-amplify";
 import { AmplifyEventBus } from 'aws-amplify-vue';
 import store from '../store';
+import FusionCharts from "fusioncharts";
+import { async } from 'q';
+var request = require('request');
 
 export default {
   data() {
@@ -56,10 +59,35 @@ export default {
         this.$store.state.signedIn = false;
         this.$store.state.user = null;
       }
+    },
+    setLoggedInUser: function() {
+      this.$store.state.user.attributes.email
+    },
+    getBalance: async function() {
+      var self = this;
+      let info = await Auth.currentUserInfo();
+      console.log("INFO: ", info);
+      console.log("LOCAL: ", this.$store.state.user);
+      const balance = request({
+        url: 'https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/getBalance',
+        method: "GET",
+        headers: {
+          "content-type": "application/json",
+          "Authorization": this.$store.state.user.signInUserSession.idToken.jwtToken
+        },
+        json: true,
+      }, function(err, res, body) {
+        console.log("err: ", err);
+        console.log("res: ", res);
+        console.log("bod: ", body);
+        self.$parent.setLoggedInUser(self.$store.state.user.attributes.email, body.currentBalance);
+      });
+      
     }
   },
   mounted: function() {
     this.setChartData();
+    this.getBalance();
   },
   watch: {
     tempVar: {
