@@ -39,7 +39,7 @@
                     <div class=buy-button-buypage>
                         Buy
                     </div>
-                    <div class=sell-button-buypage>
+                    <div @click="goToStockSell" class=sell-button-buypage>
                         Sell
                     </div>
                 </div>
@@ -99,7 +99,6 @@
         import FusionCharts from "fusioncharts";
         import { async } from 'q';
         var request = require('request');
-        var buy
        /* function printObject(o) {
             var out = '';
             for (var p in o) {
@@ -167,7 +166,7 @@ return {
             }
             console.log(POST_BODY)
             request({
-                url: "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/Beta/buyOrder/",
+                url: "https://bn0z89sji4.execute-api.ap-southeast-2.amazonaws.com/stable/buyOrder/",
                 method: "POST",
                 headers: {
                 "content-type": "application/json",
@@ -180,6 +179,9 @@ return {
                 console.log("res: ", res);
                 console.log("bod: ", body);
             });
+            },
+            goToStockSell() {
+              this.$router.push({path:'/PurchaseStockSell/'+ this.$route.params.stock})
             },
             setChartData: function() {
                 Promise.all([dataFetch, schemaFetch]).then(res => {
