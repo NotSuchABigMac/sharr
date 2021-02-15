@@ -1,5 +1,5 @@
 # sharr
-<img src="https://develop.d2ntqjq4wdf1sq.amplifyapp.com/img/Sharr.109f1d2d.png" align="right"
+<img src="https://imgur.com/a/SfYD93y" align="right"
      title="sharr Logo by James McIntyre" width="120" height="178">
      
 sharr is an all new stock market experience, designed to be responsive, intuitive, and be a delight to use for all, experienced traders, rookies and everyone in between. 
@@ -8,7 +8,7 @@ sharr is an all new stock market experience, designed to be responsive, intuitiv
 * **Focus on learning the market, not learning an app**, with an extremely intuitive interface
 * Uses **realtime data** from the latest secure APIs, to give you a **realistic trading experience**.
 
-<img src="https://giant.gfycat.com/OffensiveSoulfulGalapagoshawk.gif" align="middle"
+<img src="https://gfycat.com/OffensiveSoulfulGalapagoshawk.gif" align="middle"
      title="sharr GIF" width="200" height="356">
 
 installation and running instructions (you can refer to the to development guide document)
@@ -29,7 +29,7 @@ Prerequisites:
 4. The server should now be running, the address will be provided in the terminal.
 <br><br><br><br><br><br><br><br><br>
 
-Github URL of the project **(You're probably already here)**: https://github.com/MinuraIddamalgoda/sharr
+Github URL of the project **(You're probably already here)**: https://github.com/NotSuchABigMac/sharr
 
 The URL of the deployed project on the cloud:
 
